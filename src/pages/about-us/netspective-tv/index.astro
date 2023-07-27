@@ -51,7 +51,7 @@ const allPosts = await Astro.glob("../../../content/about-us/netspective-tv/*.md
                     ? allPosts.map(
                         (post) => (
                         <aside class="m-2 relative" >
-                          <a href={Astro.url + post.frontmatter.slugid +"/"}><img src={r.uaAssetURL.brand(post.frontmatter.image)} class="object-cover h-52 w-full" alt="" />
+                          <a href={Astro.url.pathname + post.frontmatter.slugid +"/"}><img src={r.uaAssetURL.brand(post.frontmatter.image)} class="object-cover h-52 w-full" alt="" />
                             <div class="absolute bottom-0 px-4 py-3 bg-black w-full h-full flex items-center img-block">
                               <h2 class="text-white font-semibold text-lg uppercase">{post.frontmatter.title}</h2>
                             </div>
@@ -74,7 +74,7 @@ const allPosts = await Astro.glob("../../../content/about-us/netspective-tv/*.md
                       if (categories.includes("Presentations")) {
                         return (
                           <aside class="m-2 relative">
-                            <a href={Astro.url + post.frontmatter.slugid +"/"}><img src={r.uaAssetURL.brand(post.frontmatter.image)} class="object-cover h-52 w-full" alt="" />
+                            <a href={Astro.url.pathname + post.frontmatter.slugid +"/"}><img src={r.uaAssetURL.brand(post.frontmatter.image)} class="object-cover h-52 w-full" alt="" />
                               <div class="absolute bottom-0 bg-black px-4 py-3 w-full h-full flex items-center img-block">
                                 <h2 class="text-white font-semibold text-lg uppercase">{post.frontmatter.title}</h2>
                               </div>
@@ -100,7 +100,7 @@ const allPosts = await Astro.glob("../../../content/about-us/netspective-tv/*.md
                       if (categories.includes("Shahid Shah")) {
                         return (
                           <aside class="m-2 relative">
-                            <a href={Astro.url + post.frontmatter.slugid +"/"}><img src={r.uaAssetURL.brand(post.frontmatter.image)} class="object-cover h-52 w-full" alt="" />
+                            <a href={Astro.url.pathname + post.frontmatter.slugid +"/"}><img src={r.uaAssetURL.brand(post.frontmatter.image)} class="object-cover h-52 w-full" alt="" />
                               <div class="absolute bottom-0 bg-black px-4 py-3 w-full h-full flex items-center img-block">
                                 <h2 class="text-white font-semibold text-lg uppercase">{post.frontmatter.title}</h2>
                               </div>
@@ -126,7 +126,7 @@ const allPosts = await Astro.glob("../../../content/about-us/netspective-tv/*.md
                       if (categories.includes("Video")) {
                         return (
                           <aside class="m-2 relative">
-                            <a href={Astro.url + post.frontmatter.slugid +"/"}><img src={r.uaAssetURL.brand(post.frontmatter.image)} class="object-cover h-52 w-full" alt="" />
+                            <a href={Astro.url.pathname + post.frontmatter.slugid +"/"}><img src={r.uaAssetURL.brand(post.frontmatter.image)} class="object-cover h-52 w-full" alt="" />
                               <div class="absolute bottom-0 bg-black px-4 py-3 w-full h-full flex items-center img-block">
                                 <h2 class="text-white font-semibold text-lg uppercase">{post.frontmatter.title}</h2>
                               </div>
