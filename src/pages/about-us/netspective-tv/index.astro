@@ -1,0 +1,176 @@
+---
+import NetspectiveLayout from "../../../layouts/ds/tailwind/NetspectiveLayout.astro";
+import { routes, Route } from "../../../lib/native/route";
+export interface Props {
+	readonly route: Route<any, any>;
+}
+
+
+const { route } = Astro.props;
+const r = routes(Astro, Astro.props.route);
+const allPosts = await Astro.glob("../../../content/about-us/netspective-tv/*.md");
+
+---
+
+<NetspectiveLayout route={route} {r}>
+  <main>
+    <main>
+
+      <!-- inner page > starts -->
+      
+      <section class="mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8 mb-8">
+      
+      <div id="" class="">
+        <article class="pt-10 pb-9 text-center">
+          <div class="text-center">
+           <h3 class="text-2xl font-bold mb-10 text-center inline-flex"><span class="bg-orange-600 text-white py-2 px-8">Netspective.TV</span></h3>
+          </div>
+        </article>
+        <article>
+          <div class="mb-4 border-b border-gray-200 dark:border-gray-700">
+            <ul class="flex flex-wrap -mb-px text-sm font-medium text-center justify-center" id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
+                <li class="mr-2" role="presentation">
+                    <button class="inline-block p-4 border-b-2 rounded-t-lg" id="show-all-tab" data-tabs-target="#show-all" type="button" role="tab" aria-controls="show-all" aria-selected="false">Show all</button>
+                </li>
+                <li class="mr-2" role="presentation">
+                    <button class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="presentations-tab" data-tabs-target="#presentations" type="button" role="tab" aria-controls="presentations" aria-selected="false">Presentations</button>
+                </li>
+                <li class="mr-2" role="presentation">
+                    <button class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="shahid-shah-tab" data-tabs-target="#shahid-shah" type="button" role="tab" aria-controls="shahid-shah" aria-selected="false">Shahid shah</button>
+                </li>
+                <li role="presentation">
+                    <button class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="videos-tab" data-tabs-target="#videos" type="button" role="tab" aria-controls="videos" aria-selected="false">Videos</button>
+                </li>
+            </ul>
+          </div>
+          <div id="myTabContent">
+            <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="show-all" role="tabpanel" aria-labelledby="show-all-tab">
+              <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 text-center">
+                {
+                  allPosts.length > 0
+                    ? allPosts.map(
+                        (post) => (
+                        <aside class="m-2 relative" >
+                          <a href={Astro.url + post.frontmatter.slugid}><img src={r.uaAssetURL.brand(post.frontmatter.image)} class="object-cover h-52 w-full" alt="" />
+                            <div class="absolute bottom-0 px-4 py-3 bg-black w-full h-full flex items-center img-block">
+                              <h2 class="text-white font-semibold text-lg uppercase">{post.frontmatter.title}</h2>
+                            </div>
+                          </a>
+                        </aside>
+                        ),
+                      )
+                    : "No data"
+                }
+              </div>
+            </div>
+            <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="presentations" role="tabpanel" aria-labelledby="presentations-tab">
+              <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 text-center">
+                {
+                  allPosts.length > 0 ? (
+                    allPosts.map((post) => {
+                      const categories = Array.isArray(post.frontmatter.category)
+                        ? post.frontmatter.category
+                        : [post.frontmatter.category]; 
+                      if (categories.includes("Presentations")) {
+                        return (
+                          <aside class="m-2 relative">
+                            <a href={Astro.url + post.frontmatter.slugid}><img src={r.uaAssetURL.brand(post.frontmatter.image)} class="object-cover h-52 w-full" alt="" />
+                              <div class="absolute bottom-0 bg-black px-4 py-3 w-full h-full flex items-center img-block">
+                                <h2 class="text-white font-semibold text-lg uppercase">{post.frontmatter.title}</h2>
+                              </div>
+                            </a>
+                          </aside>
+                        );
+                      }
+                    })
+                  ) : (
+                    <p>No data</p>
+                  )
+                }
+              </div>
+            </div>
+            <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="shahid-shah" role="tabpanel" aria-labelledby="shahid-shah-tab">
+              <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 text-center">
+                {
+                  allPosts.length > 0 ? (
+                    allPosts.map((post) => {
+                      const categories = Array.isArray(post.frontmatter.category)
+                        ? post.frontmatter.category
+                        : [post.frontmatter.category]; 
+                      if (categories.includes("Shahid Shah")) {
+                        return (
+                          <aside class="m-2 relative">
+                            <a href={Astro.url + post.frontmatter.slugid}><img src={r.uaAssetURL.brand(post.frontmatter.image)} class="object-cover h-52 w-full" alt="" />
+                              <div class="absolute bottom-0 bg-black px-4 py-3 w-full h-full flex items-center img-block">
+                                <h2 class="text-white font-semibold text-lg uppercase">{post.frontmatter.title}</h2>
+                              </div>
+                            </a>
+                          </aside>
+                        );
+                      }
+                    })
+                  ) : (
+                    <p>No data</p>
+                  )
+                }
+              </div>
+            </div>
+            <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="videos" role="tabpanel" aria-labelledby="videos-tab">
+              <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 text-center">
+                {
+                  allPosts.length > 0 ? (
+                    allPosts.map((post) => {
+                      const categories = Array.isArray(post.frontmatter.category)
+                        ? post.frontmatter.category
+                        : [post.frontmatter.category]; 
+                      if (categories.includes("Video")) {
+                        return (
+                          <aside class="m-2 relative">
+                            <a href={Astro.url + post.frontmatter.slugid}><img src={r.uaAssetURL.brand(post.frontmatter.image)} class="object-cover h-52 w-full" alt="" />
+                              <div class="absolute bottom-0 bg-black px-4 py-3 w-full h-full flex items-center img-block">
+                                <h2 class="text-white font-semibold text-lg uppercase">{post.frontmatter.title}</h2>
+                              </div>
+                            </a>
+                          </aside>
+                        );
+                      }
+                    })
+                  ) : (
+                    <p>No data</p>
+                  )
+                }
+              </div>
+            </div>
+          </div>
+
+        </article>
+      </div>
+      
+      </section>
+      <!-- inner page < ends -->
+      
+      </main>
+  </main>
+  <section class="px-8 sm:px-6 lg:px-8 bg-cover bg-no-repeat bg-center py-10 bg-image">
+    <article class="mx-auto max-w-6xl py-9 text-white text-center">
+      <h3 class="text-2xl font-semibold pb-5">Netspective is a leader in Technology and Consulting services in regulated markets - Healthcare, Government and Medical Technology.</h3>
+      <p>Technology, consulting, and solutions focused on firms impacted by FDA, ONC, NIST or other safety, privacy, and security regulations.</p>
+    </article>
+  </section>
+  
+  <style>
+  .img-block {
+    display: none;
+  }
+  
+  aside:hover .img-block {
+    display: flex;
+  }
+  </style>
+  
+</NetspectiveLayout>
+
+  
+  
+  
+  

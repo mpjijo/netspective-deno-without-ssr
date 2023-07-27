@@ -1,0 +1,239 @@
+---
+import NetspectiveLayout from "../../../layouts/ds/tailwind/NetspectiveLayout.astro";
+import { routes, Route } from "../../../lib/native/route";
+
+export interface Props {
+	readonly route: Route<any, any>;
+}
+
+
+const { route } = Astro.props;
+const r = routes(Astro, Astro.props.route);
+
+---
+
+<NetspectiveLayout route={route} {r}>
+  <main>
+
+    <!-- inner page > starts -->
+    <section class="px-8 sm:px-6 lg:px-8 bg-cover bg-no-repeat bg-center py-10 bg-red-800">
+      <article class="mx-auto max-w-4xl py-9 text-white text-center">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="my-2">
+          <a href="/solutions/easyryde/#research" class="text-white">
+            <p class="mb-1 flex justify-center"><img src={r.uaAssetURL.brand(
+              "/www.netspective.com/solutions/easyryde/EasyRyde.png"
+            )} alt="Patient-Content"></p>            
+          </a>
+          <div class="mb-1 text-2xl text-center"><b>Easy Ryde</b></div>
+          </div>
+          <div class="my-2 mt-4">
+            <h4 class="text-2xl font-semibold pb-5 text-gray-100">Help Patients Stay Healthy and On Schedule</h4>
+            <p>The Netspective™ EasyRyde® scheduling service combines cloud-based software, affordable rideshare services and a network of safe, reliable drivers. Together, they help patients without transportation stay healthy by getting to doctors’ appointments on time, every time.</p>
+          </div>
+        </div>        
+      </article>
+    </section>
+    <section class="mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8 mb-8">
+    
+    <div id="why-attest" class="border border-x-0 border-t-0 border-gray-100">
+      <article>
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 text-center">
+              <aside class="bg-sky-600 text-white py-5 px-5 min-h-full">
+                  <div class="text-lg font-medium leading-6 py-2 uppercase">Patients</div>
+                  <div class="flex justify-center my-3">
+                    <img src={r.uaAssetURL.brand(
+                      "/www.netspective.com/solutions/easyryde/Patients.png"
+                    )} alt="Patients">
+                  </div>
+                  <p class="mb-0">Helps patients without an automobile overcome transportation obstacles and get to medical appointments, safely and consistently.</p>
+              </aside>
+              <aside class="bg-rose-600 text-white py-5 px-5 min-h-full">
+                <div class="text-lg font-medium leading-6 py-2 uppercase">Caregivers, Relatives and Loved Ones</div>
+                <div class="flex justify-center my-3">
+                  <img src={r.uaAssetURL.brand(
+                    "/www.netspective.com/solutions/easyryde/Caregivers01.png"
+                  )} alt="Caregivers, Relatives and Loved Ones">
+                </div>
+                <p class="mb-0">Enables caregivers to request a ride for the patient, anytime, 24⁄7.</p>
+            </aside>
+            <aside class="bg-orange-600 text-white py-5 px-5 min-h-full">
+              <div class="text-lg font-medium leading-6 py-2 uppercase">Healthcare Organization Staff</div>
+              <div class="flex justify-center my-3">
+                <img src={r.uaAssetURL.brand(
+                  "/www.netspective.com/solutions/easyryde/Caregivers01.png"
+                )} alt="Solutions and Technologies">
+              </div>
+              <p class="mb-0">Calls for and schedules EasyRyde trips to and from medical facility on the patients behalf.</p>
+          </aside>  
+          <aside class="bg-green-600 text-white py-5 px-5 min-h-full">
+            <div class="text-lg font-medium leading-6 py-2 uppercase">EasyRyde Driver Network</div>
+            <div class="flex justify-center my-3">
+              <img src={r.uaAssetURL.brand(
+                "/www.netspective.com/solutions/easyryde/EasyRyde-Driver.png"
+              )} alt="EasyRyde Driver Network">
+            </div>
+            <p class="mb-0">Includes Rideshare, NEMT and volunteer drivers, who pick up patients and deliver them to healthcare facilities, safely and on time.</p>
+        </aside>        
+          </div>
+      </article> 
+      <article class="pt-10"> 
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 pt-6">   
+          <div>
+             <p><b>Easy Access to Safe, Reliable Medical Transportation</b></p>
+              <p>Provides carless medical patients with convenient, single-point access to non-emergency medical transportation, door-to-door from their home to the hospital.</p>
+          </div>
+           <div>
+              <div class="flex mt-7"><img src="/assets-natural/brand/www.netspective.com/solutions/easyryde/Ride-Requests-that-are-Fast-and-Reliable.jpg#right"alt=""></div>
+          </div>
+        </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 pt-6">   
+        <div>
+          <div class="flex mb-7 mt-7"><img src="/assets-natural/brand/www.netspective.com/solutions/easyryde/Help-Healthcare-Pros.jpg"alt=""></div>
+        </div>
+        <div>
+           <p><b>Cloud-Based Services Keep IT Costs and Effort Under Control</b></p>
+            <p>EasyRyde uses a SaaS-based delivery model, which requires no deployment effort and no system maintenance. The EasyRyde API integrates directly into existing scheduling systems and healthcare applications such as EHR and RCM.</p>
+        </div>         
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4">   
+        <div>
+           <p><b>Ride Requests that are Fast and Reliable</b></p>
+            <p>HCO staff members make EasyRyde requests part of the appointment scheduling process. They can choose the right type of vehicle and schedule a ride, in advance or on demand. Then, they can keep an eye on the vehicle’s progress with GPS.</p>
+        </div>
+         <div>
+            <div class="flex mb-7 mt-7"><img src="/assets-natural/brand/www.netspective.com/solutions/easyryde/Easy-Access-to-Safe.jpg"alt=""></div>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4">   
+        <div>
+          <div class="flex mb-7 mt-7"><img src="/assets-natural/brand/www.netspective.com/solutions/easyryde/Cloud-Based-Services.jpg"alt=""></div>
+        </div>
+        <div>
+           <p><b>Benefits and Value</b></p>
+            <ul class="list-disc ml-8 mb-4">
+              <li>Controls healthcare operations costs by minimizing expensive emergency room visits and missed appointments.</li>
+              <li>Improves patient healthcare status by getting patients into the doctor’s office more often.</li>
+              <li>Protects HCO revenue by avoiding missed appointments and no-shows.</li>
+            </ul>
+        </div>         
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4">   
+        <div>
+           <p><b>Help Healthcare Pros Stay in Touch</b></p>
+            <p>Nationwide communications coverage helps healthcare professionals address sudden changes in patients health, even if they are out of town.</p>
+        </div>
+         <div>
+            <div class="flex mb-7 mt-7"><img src="/assets-natural/brand/www.netspective.com/solutions/easyryde/Help-healthcare-professionals.jpg"alt=""></div>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4">   
+        <div>
+          <div class="flex mt-7"><img src="/assets-natural/brand/www.netspective.com/solutions/easyryde/Benefits-and-Value.jpg"alt=""></div>
+        </div>
+        <div>
+           <p><b>Real-Time Ride Notification</b></p>
+            <p>Ride notifications with smartphone and SMS text messages. Passengers also receive real time vehicle position (GPS) and status updates.</p>
+        </div>         
+      </div>
+      </article>
+
+      <article class="pb-9 pt-9">
+        <p class="text-xl text-center"><b>More Features</b></p>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+          <aside class="col-span-1 md:col-span-1 min-h-full">
+            <div class="flex">
+              <div class="mr-3 text-orange-600">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                  <path fill-rule="evenodd" d="M5.25 2.25a3 3 0 00-3 3v4.318a3 3 0 00.879 2.121l9.58 9.581c.92.92 2.39 1.186 3.548.428a18.849 18.849 0 005.441-5.44c.758-1.16.492-2.629-.428-3.548l-9.58-9.581a3 3 0 00-2.122-.879H5.25zM6.375 7.5a1.125 1.125 0 100-2.25 1.125 1.125 0 000 2.25z" clip-rule="evenodd" />
+                </svg>
+            </div>
+              <div>
+                <h3 class="text-lg font-bold pb-2 text-gray-800">Simplified billing</h3>
+                <p class="mb-0">Account holders are billed monthly by mail or email.</p> 
+              </div>
+            </div>
+          </aside>
+          <aside class="col-span-1 md:col-span-1 min-h-full">
+            <div class="flex">
+              <div class="mr-3 text-orange-600">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                  <path d="M4.913 2.658c2.075-.27 4.19-.408 6.337-.408 2.147 0 4.262.139 6.337.408 1.922.25 3.291 1.861 3.405 3.727a4.403 4.403 0 00-1.032-.211 50.89 50.89 0 00-8.42 0c-2.358.196-4.04 2.19-4.04 4.434v4.286a4.47 4.47 0 002.433 3.984L7.28 21.53A.75.75 0 016 21v-4.03a48.527 48.527 0 01-1.087-.128C2.905 16.58 1.5 14.833 1.5 12.862V6.638c0-1.97 1.405-3.718 3.413-3.979z" />
+                  <path d="M15.75 7.5c-1.376 0-2.739.057-4.086.169C10.124 7.797 9 9.103 9 10.609v4.285c0 1.507 1.128 2.814 2.67 2.94 1.243.102 2.5.157 3.768.165l2.782 2.781a.75.75 0 001.28-.53v-2.39l.33-.026c1.542-.125 2.67-1.433 2.67-2.94v-4.286c0-1.505-1.125-2.811-2.664-2.94A49.392 49.392 0 0015.75 7.5z" />
+                </svg>                
+            </div>
+              <div>
+                <h3 class="text-lg font-bold pb-2 text-gray-800">Quick response</h3>
+                <p class="mb-0">Ride request dispatched automatically to nearest driver.</p> 
+              </div>
+            </div>
+          </aside>
+          <aside class="col-span-1 md:col-span-1 min-h-full">
+            <div class="flex">
+              <div class="mr-3 text-orange-600">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                  <path fill-rule="evenodd" d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z" clip-rule="evenodd" />
+                </svg>
+            </div>
+              <div>
+                <h3 class="text-lg font-bold pb-2 text-gray-800">Driver analytics</h3>
+                <p class="mb-0">Accurate tracking and reporting of driver activity and performance.</p> 
+              </div>
+            </div>
+          </aside>
+          <aside class="col-span-1 md:col-span-1 min-h-full">
+            <div class="flex">
+              <div class="mr-3 text-orange-600">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                  <path d="M17.004 10.407c.138.435-.216.842-.672.842h-3.465a.75.75 0 01-.65-.375l-1.732-3c-.229-.396-.053-.907.393-1.004a5.252 5.252 0 016.126 3.537zM8.12 8.464c.307-.338.838-.235 1.066.16l1.732 3a.75.75 0 010 .75l-1.732 3.001c-.229.396-.76.498-1.067.16A5.231 5.231 0 016.75 12c0-1.362.519-2.603 1.37-3.536zM10.878 17.13c-.447-.097-.623-.608-.394-1.003l1.733-3.003a.75.75 0 01.65-.375h3.465c.457 0 .81.408.672.843a5.252 5.252 0 01-6.126 3.538z" />
+                  <path fill-rule="evenodd" d="M21 12.75a.75.75 0 000-1.5h-.783a8.22 8.22 0 00-.237-1.357l.734-.267a.75.75 0 10-.513-1.41l-.735.268a8.24 8.24 0 00-.689-1.191l.6-.504a.75.75 0 10-.964-1.149l-.6.504a8.3 8.3 0 00-1.054-.885l.391-.678a.75.75 0 10-1.299-.75l-.39.677a8.188 8.188 0 00-1.295-.471l.136-.77a.75.75 0 00-1.477-.26l-.136.77a8.364 8.364 0 00-1.377 0l-.136-.77a.75.75 0 10-1.477.26l.136.77c-.448.121-.88.28-1.294.47l-.39-.676a.75.75 0 00-1.3.75l.392.678a8.29 8.29 0 00-1.054.885l-.6-.504a.75.75 0 00-.965 1.149l.6.503a8.243 8.243 0 00-.689 1.192L3.8 8.217a.75.75 0 10-.513 1.41l.735.267a8.222 8.222 0 00-.238 1.355h-.783a.75.75 0 000 1.5h.783c.042.464.122.917.238 1.356l-.735.268a.75.75 0 10.513 1.41l.735-.268c.197.417.428.816.69 1.192l-.6.504a.75.75 0 10.963 1.149l.601-.505c.326.323.679.62 1.054.885l-.392.68a.75.75 0 101.3.75l.39-.679c.414.192.847.35 1.294.471l-.136.771a.75.75 0 101.477.26l.137-.772a8.376 8.376 0 001.376 0l.136.773a.75.75 0 101.477-.26l-.136-.772a8.19 8.19 0 001.294-.47l.391.677a.75.75 0 101.3-.75l-.393-.679a8.282 8.282 0 001.054-.885l.601.504a.75.75 0 10.964-1.15l-.6-.503a8.24 8.24 0 00.69-1.191l.735.268a.75.75 0 10.512-1.41l-.734-.268c.115-.438.195-.892.237-1.356h.784zm-2.657-3.06a6.744 6.744 0 00-1.19-2.053 6.784 6.784 0 00-1.82-1.51A6.704 6.704 0 0012 5.25a6.801 6.801 0 00-1.225.111 6.7 6.7 0 00-2.15.792 6.784 6.784 0 00-2.952 3.489.758.758 0 01-.036.099A6.74 6.74 0 005.251 12a6.739 6.739 0 003.355 5.835l.01.006.01.005a6.706 6.706 0 002.203.802c.007 0 .014.002.021.004a6.792 6.792 0 002.301 0l.022-.004a6.707 6.707 0 002.228-.816 6.781 6.781 0 001.762-1.483l.009-.01.009-.012a6.744 6.744 0 001.18-2.064c.253-.708.39-1.47.39-2.264a6.74 6.74 0 00-.408-2.308z" clip-rule="evenodd" />
+                </svg>
+            </div>
+              <div>
+                <h3 class="text-lg font-bold pb-2 text-gray-800">Simple app integration</h3>
+                <p class="mb-0">EasyRyde connects to any scheduling or booking app.</p> 
+              </div>
+            </div>
+          </aside>
+          <aside class="col-span-1 md:col-span-1 min-h-full">
+            <div class="flex">
+              <div class="mr-3 text-orange-600">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                  <path fill-rule="evenodd" d="M15 3.75a.75.75 0 01.75-.75h4.5a.75.75 0 01.75.75v4.5a.75.75 0 01-1.5 0V5.56l-3.97 3.97a.75.75 0 11-1.06-1.06l3.97-3.97h-2.69a.75.75 0 01-.75-.75zm-12 0A.75.75 0 013.75 3h4.5a.75.75 0 010 1.5H5.56l3.97 3.97a.75.75 0 01-1.06 1.06L4.5 5.56v2.69a.75.75 0 01-1.5 0v-4.5zm11.47 11.78a.75.75 0 111.06-1.06l3.97 3.97v-2.69a.75.75 0 011.5 0v4.5a.75.75 0 01-.75.75h-4.5a.75.75 0 010-1.5h2.69l-3.97-3.97zm-4.94-1.06a.75.75 0 010 1.06L5.56 19.5h2.69a.75.75 0 010 1.5h-4.5a.75.75 0 01-.75-.75v-4.5a.75.75 0 011.5 0v2.69l3.97-3.97a.75.75 0 011.06 0z" clip-rule="evenodd" />
+              </svg>              
+            </div>
+              <div>
+                <h3 class="text-lg font-bold pb-2 text-gray-800">Flexible scheduling</h3>
+                <p class="mb-0">Passengers request rides in advance or on demand, for themselves or others.</p> 
+              </div>
+            </div>
+          </aside>
+          <aside class="col-span-1 md:col-span-1 min-h-full">
+            <div class="flex">
+              <div class="mr-3 text-orange-600">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                  <path fill-rule="evenodd" d="M4.5 9.75a6 6 0 0111.573-2.226 3.75 3.75 0 014.133 4.303A4.5 4.5 0 0118 20.25H6.75a5.25 5.25 0 01-2.23-10.004 6.072 6.072 0 01-.02-.496z" clip-rule="evenodd" />
+                </svg>
+            </div>
+              <div>
+                <h3 class="text-lg font-bold pb-2 text-gray-800">Driver network</h3>
+                <p class="mb-0">A database of qualified paratransit transportation agencies providing door-to-door service.</p> 
+              </div>
+            </div>
+          </aside>
+    </div>
+      </article> 
+    </section>     
+    
+    <section class="px-8 sm:px-6 lg:px-8 bg-cover bg-no-repeat bg-center py-10 bg-image">
+        <article class="mx-auto max-w-6xl py-9 text-white text-center">
+          <h3 class="text-2xl font-semibold pb-5">Netspective is a leader in Technology and Consulting services in regulated markets - Healthcare, Government and Medical Technology.</h3>
+          <p>Technology, consulting, and solutions focused on firms impacted by FDA, ONC, NIST or other safety, privacy, and security regulations.</p>
+        </article>
+      </section>
+    <!-- inner page < ends -->
+    
+    
+    
+    </main>
+</NetspectiveLayout>

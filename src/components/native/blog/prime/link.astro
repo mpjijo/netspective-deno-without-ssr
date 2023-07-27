@@ -1,0 +1,55 @@
+---
+interface Props {
+  text: string;
+  href: string;
+  style: "primary" | "secondary";
+  icon?: {
+    name: string;
+    side: "left" | "right";
+  };
+  isFilled?: boolean;
+  borderVisible?: boolean;
+  classes?: string;
+}
+const {
+  text,
+  href,
+  style,
+  icon,
+  isFilled = true,
+  borderVisible = false,
+  classes,
+  ...rest
+} = Astro.props as Props;
+---
+
+<a
+  class="relative inline-flex items-center mt-4 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus-visible:outline-offset-0"
+  href={href}
+  class:list={[
+    "link",
+    classes,
+    style,
+    { filled: isFilled, bordered: borderVisible },
+  ]}
+  {...rest}
+>
+  {
+    icon && icon.side === "left" && (
+      <svg class="mr-3 h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+        <path fill-rule="evenodd" d="M18 10a.75.75 0 01-.75.75H4.66l2.1 1.95a.75.75 0 11-1.02 1.1l-3.5-3.25a.75.75 0 010-1.1l3.5-3.25a.75.75 0 111.02 1.1l-2.1 1.95h12.59A.75.75 0 0118 10z" clip-rule="evenodd" />
+      </svg>
+    )
+  }
+
+  <span>{text}</span>
+
+  {
+    icon && icon.side === "right" && (
+      <svg class="ml-3 h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+        <path fill-rule="evenodd" d="M2 10a.75.75 0 01.75-.75h12.59l-2.1-1.95a.75.75 0 111.02-1.1l3.5 3.25a.75.75 0 010 1.1l-3.5 3.25a.75.75 0 11-1.02-1.1l2.1-1.95H2.75A.75.75 0 012 10z" clip-rule="evenodd" />
+      </svg>
+    )
+  }
+</a>
+

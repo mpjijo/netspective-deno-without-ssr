@@ -1,0 +1,12 @@
+---
+title: "Will the Good Guys Ever Catch Up to the Bad Guys When It Comes to Cybercrime in Healthcare"
+metatitle: "Will the Good Guys Ever Catch Up to the Bad Guys When It Comes to Cybercrime in Healthcare - Netspective"
+type: "page"
+url: "/thought-leadership/knowldgebase/will-the-good-guys-ever-catch-up-to-the-bad-guys-when-it-comes-to-cybercrime-in-healthcare/"
+categories: "Cybersecurity"
+keywords: "Medical Technology, Healthcare & Government IT"
+description: "Can the good guys ever catch up to the bad guys when it comes to data and IT security in healthcare That most basic of questions seemed to hang over the results of a recent new report on data and IT security that spanned all industries and was international in scopeAs Assistant Editor Heather Landi reported in an article last week Eighty-one percent of senior IT security executives at healthcare organizations anticipate IT security spending increases in the next 12 months yet at the same time successful data breaches are also up significantly" 
+   
+
+---
+Can the good guys ever catch up to the bad guys when it comes to data and IT security in healthcare That most basic of questions seemed to hang over the results of a recent new report on data and IT security that spanned all industries and was international in scopeAs Assistant Editor Heather Landi reported in an article last week Eighty-one percent of senior IT security executives at healthcare organizations anticipate IT security spending increases in the next 12 months yet at the same time successful data breaches are also up significantly These were the findings of a recent survey conducted by Thales a data security and information systems solutions provider and in conjunction with 451 Research which point to an ongoing disconnect between the security solutions organizations spend money on and the ability of those solutions to protect sensitive dataAs Landi noted The report findings present a glass half-full or half-empty dilemma The projected increase in IT security spending could potentially be good news for healthcare IT leaders dealing with budget constraints however the findings seem to indicate that organizations continue to focus their spending on strategies and tools that are not effectively preventing data breaches.

@@ -1,0 +1,251 @@
+---
+import NetspectiveLayout from "../../../layouts/ds/tailwind/NetspectiveLayout.astro";
+import { routes, Route } from "../../../lib/native/route";
+
+export interface Props {
+	readonly route: Route<any, any>;
+}
+
+
+const { route } = Astro.props;
+const r = routes(Astro, Astro.props.route);
+
+---
+
+<NetspectiveLayout route={route} {r}>
+  <main>
+
+    <!-- inner page > starts -->
+    <section class="px-8 sm:px-6 lg:px-8 bg-cover bg-no-repeat bg-center py-10 bg-red-800">
+      <article class="mx-auto max-w-4xl py-9 text-white text-center">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="my-2">
+            <p class="mb-1 flex justify-center"><img src={r.uaAssetURL.brand(
+              "/www.netspective.com/solutions/nup/NUP_top_banner2-480x360.png"
+            )} alt="Patient-Content"></p>   
+          <div class="mb-1 text-2xl text-center"><b>Netspective Unified Process</b></div>
+          </div>
+          <div class="my-2 mt-4">
+            <h4 class="text-2xl font-semibold pb-5 text-gray-100">An Agile Quality System & SDLC for Gov, Health, & Bio IT Deliverables</h4>
+            <p>The Netspective Unified Process guides product teams to consistently create higher quality data and software solutions for FDA and ONC regulated environments</p>
+          </div>
+        </div>        
+      </article>
+    </section>
+    <section class="mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8 mb-8">
+    
+    <div id="why-attest" class="border border-x-0 border-t-0 border-gray-100">
+      <article>
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 text-center">
+              <aside class="bg-sky-600 text-white py-5 px-5 min-h-full">
+                  <div class="text-lg font-medium leading-6 py-2 uppercase">Compliance Manager</div>
+                  <div class="flex justify-center my-3">
+                    <img src={r.uaAssetURL.brand(
+                      "/www.netspective.com/solutions/nup/compliance-manager.png"
+                    )} alt="Compliance Manager">
+                  </div>
+                  <p class="mb-0">A huge knowledge base to tap into for information on FDA, HIPAA, SOX, PCI, FISMA, 508 compliance</p>
+              </aside>
+              <aside class="bg-rose-600 text-white py-5 px-5 min-h-full">
+                <div class="text-lg font-medium leading-6 py-2 uppercase">Quality System Developers</div>
+                <div class="flex justify-center my-3">
+                  <img src={r.uaAssetURL.brand(
+                    "/www.netspective.com/solutions/nup/developer-icon1.png"
+                  )} alt="Quality System Developers">
+                </div>
+                <p class="mb-0">Designed specifically for the development and implementation of safety and life critical systems</p>
+            </aside>
+            <aside class="bg-orange-600 text-white py-5 px-5 min-h-full">
+              <div class="text-lg font-medium leading-6 py-2 uppercase">Solutions and Technologies</div>
+              <div class="flex justify-center my-3">
+                <img src={r.uaAssetURL.brand(
+                  "/www.netspective.com/solutions/nup/Solutions-Technologies.png"
+                )} alt="Solutions and Technologies">
+              </div>
+              <p class="mb-0">Use as is or use the tools provided to extend, adapt, and elaborate all existing content to make it organization specific</p>
+          </aside>         
+          </div>
+      </article> 
+      <article class="pt-10"> 
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 pt-6">   
+          <div>
+             <p><b>Easy to teach, simple to follow, but productive and practical</b></p>
+              <p>We follow an Agile methodology with time boxed releases designed to be repeatable and easy to document. A well defined lifecycle with simple steps makes it effortless for the team to follow a HIPAA compliant or FDA Quality System Regulated process yet still deliver superior products in a timely manner.</p>
+          </div>
+           <div>
+              <div class="flex justify-center mt-7"><img src="/assets-natural/brand/www.netspective.com/solutions/nup/NUP_diagram.png#right"alt=""></div>
+          </div>
+        </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 pt-6">   
+        <div>
+          <div class="flex justify-center mt-7"><img src="/assets-natural/brand/www.netspective.com/solutions/nup/NUP_regulatory_mandate.png"alt=""></div>
+        </div>
+        <div>
+           <p><b>NUP gives you an unfair advantage when meeting FDA, NIST, ONC, or other regulatory mandates</b></p>
+            <p>Proving that regulatory mandates are being met in an agile but practical way is not easy. NUP has already gathered all the requirements and put them into a unified approach so that you can immediately start development, not hope for a good Quality System.</p>
+        </div>         
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4">   
+        <div>
+           <p><b>A large body of knowledge is built in, but we give you tools that grow and adapt with your team</b></p>
+            <p>NUP is a compilation of practices and guidelines that have been created via significant research and experience. It contains a wealth of knowledge that the team refers to during every phase of a product lifecycle. No single process can fit every team so NUP comes with tools that let you extend, adapt, and elaborate all existing content.</p>
+        </div>
+         <div>
+            <div class="flex justify-center mt-7"><img src="/assets-natural/brand/www.netspective.com/solutions/nup/NUP_regulatory_mandate-04.png"alt=""></div>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4">   
+        <div>
+          <div class="flex justify-center mt-7"><img src="/assets-natural/brand/www.netspective.com/solutions/nup/NUP_regulatory_mandate-05.png"alt=""></div>
+        </div>
+        <div>
+           <p><b>Process verification made easy and fast</b></p>
+            <ul class="list-disc ml-8 mb-4">
+              <li>Ensures that every process step has been considered.</li>
+              <li>Ensures that every task has been completed and verifiable.</li>
+              <li>Ensures that every aspect of quality has been implemented, inspected and the product meets requirements.</li>
+            </ul>
+        </div>         
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4">   
+        <div>
+           <p><b>Ready to use templates</b></p>
+            <p>A huge collection of templates that the team can use to create the artifacts required for every phase of the life cycle.</p>
+        </div>
+         <div>
+            <div class="flex justify-center mt-7"><img src="/assets-natural/brand/www.netspective.com/solutions/nup/templates.png"alt=""></div>
+        </div>
+      </div>
+      </article>
+
+      <article class="pb-9 pt-9">
+        <p class="text-xl text-center"><b>More Features</b></p>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+          <aside class="col-span-1 md:col-span-1 min-h-full">
+            <div class="flex">
+              <div class="mr-3 text-orange-600">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                  <path fill-rule="evenodd" d="M3 4.875C3 3.839 3.84 3 4.875 3h4.5c1.036 0 1.875.84 1.875 1.875v4.5c0 1.036-.84 1.875-1.875 1.875h-4.5A1.875 1.875 0 013 9.375v-4.5zM4.875 4.5a.375.375 0 00-.375.375v4.5c0 .207.168.375.375.375h4.5a.375.375 0 00.375-.375v-4.5a.375.375 0 00-.375-.375h-4.5zm7.875.375c0-1.036.84-1.875 1.875-1.875h4.5C20.16 3 21 3.84 21 4.875v4.5c0 1.036-.84 1.875-1.875 1.875h-4.5a1.875 1.875 0 01-1.875-1.875v-4.5zm1.875-.375a.375.375 0 00-.375.375v4.5c0 .207.168.375.375.375h4.5a.375.375 0 00.375-.375v-4.5a.375.375 0 00-.375-.375h-4.5zM6 6.75A.75.75 0 016.75 6h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75A.75.75 0 016 7.5v-.75zm9.75 0A.75.75 0 0116.5 6h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75zM3 14.625c0-1.036.84-1.875 1.875-1.875h4.5c1.036 0 1.875.84 1.875 1.875v4.5c0 1.035-.84 1.875-1.875 1.875h-4.5A1.875 1.875 0 013 19.125v-4.5zm1.875-.375a.375.375 0 00-.375.375v4.5c0 .207.168.375.375.375h4.5a.375.375 0 00.375-.375v-4.5a.375.375 0 00-.375-.375h-4.5zm7.875-.75a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75zm6 0a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75zM6 16.5a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75zm9.75 0a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75zm-3 3a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75zm6 0a.75.75 0 01.75-.75h.75a.75.75 0 01.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75z" clip-rule="evenodd" />
+                </svg>
+                
+                
+            </div>
+              <div>
+                <h3 class="text-lg font-bold pb-2 text-gray-800">Disciplines</h3>
+                <p class="mb-0">Processes are also organized into disciplines for easy access to resources</p> 
+              </div>
+            </div>
+          </aside>
+          <aside class="col-span-1 md:col-span-1 min-h-full">
+            <div class="flex">
+              <div class="mr-3 text-orange-600">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                  <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clip-rule="evenodd" />
+                </svg>
+                
+                
+            </div>
+              <div>
+                <h3 class="text-lg font-bold pb-2 text-gray-800">Checklists</h3>
+                <p class="mb-0">Easy to maintain checklists ensure process verification. These checklists are also provided as ready to use checklists in ProveIT.</p> 
+              </div>
+            </div>
+          </aside>
+          <aside class="col-span-1 md:col-span-1 min-h-full">
+            <div class="flex">
+              <div class="mr-3 text-orange-600">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                  <path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z" clip-rule="evenodd" />
+                </svg>
+            </div>
+              <div>
+                <h3 class="text-lg font-bold pb-2 text-gray-800">Roles</h3>
+                <p class="mb-0">Roles clearly define the functions of project members.</p> 
+              </div>
+            </div>
+          </aside>
+          <aside class="col-span-1 md:col-span-1 min-h-full">
+            <div class="flex">
+              <div class="mr-3 text-orange-600">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                  <path d="M7.5 3.375c0-1.036.84-1.875 1.875-1.875h.375a3.75 3.75 0 013.75 3.75v1.875C13.5 8.161 14.34 9 15.375 9h1.875A3.75 3.75 0 0121 12.75v3.375C21 17.16 20.16 18 19.125 18h-9.75A1.875 1.875 0 017.5 16.125V3.375z" />
+                  <path d="M15 5.25a5.23 5.23 0 00-1.279-3.434 9.768 9.768 0 016.963 6.963A5.23 5.23 0 0017.25 7.5h-1.875A.375.375 0 0115 7.125V5.25zM4.875 6H6v10.125A3.375 3.375 0 009.375 19.5H16.5v1.125c0 1.035-.84 1.875-1.875 1.875h-9.75A1.875 1.875 0 013 20.625V7.875C3 6.839 3.84 6 4.875 6z" />
+                </svg>
+            </div>
+              <div>
+                <h3 class="text-lg font-bold pb-2 text-gray-800">Templates</h3>
+                <p class="mb-0">Well laid out templates for requirements, functional and technical specifications and much more</p> 
+              </div>
+            </div>
+          </aside>
+          <aside class="col-span-1 md:col-span-1 min-h-full">
+            <div class="flex">
+              <div class="mr-3 text-orange-600">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8">
+                  <path d="M8.25 10.875a2.625 2.625 0 115.25 0 2.625 2.625 0 01-5.25 0z" />
+                  <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm-1.125 4.5a4.125 4.125 0 102.338 7.524l2.007 2.006a.75.75 0 101.06-1.06l-2.006-2.007a4.125 4.125 0 00-3.399-6.463z" clip-rule="evenodd" />
+                </svg>
+                
+            </div>
+              <div>
+                <h3 class="text-lg font-bold pb-2 text-gray-800">References</h3>
+                <p class="mb-0">A library of references to various resources compiled after extensive research.</p> 
+              </div>
+            </div>
+          </aside>
+          <aside class="col-span-1 md:col-span-1 min-h-full">
+            <div class="flex">
+              <div class="mr-3 text-orange-600">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                  <path d="M11.25 4.533A9.707 9.707 0 006 3a9.735 9.735 0 00-3.25.555.75.75 0 00-.5.707v14.25a.75.75 0 001 .707A8.237 8.237 0 016 18.75c1.995 0 3.823.707 5.25 1.886V4.533zM12.75 20.636A8.214 8.214 0 0118 18.75c.966 0 1.89.166 2.75.47a.75.75 0 001-.708V4.262a.75.75 0 00-.5-.707A9.735 9.735 0 0018 3a9.707 9.707 0 00-5.25 1.533v16.103z" />
+                </svg>
+            </div>
+              <div>
+                <h3 class="text-lg font-bold pb-2 text-gray-800">Guidance & Practices</h3>
+                <p class="mb-0">Guidance and Practices form an integral part of NUP with huge amounts of information available at the developer finger tips.</p> 
+              </div>
+            </div>
+          </aside>
+          <aside class="col-span-1 md:col-span-1 min-h-full">
+            <div class="flex">
+              <div class="mr-3 text-orange-600">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                  <path d="M17.004 10.407c.138.435-.216.842-.672.842h-3.465a.75.75 0 01-.65-.375l-1.732-3c-.229-.396-.053-.907.393-1.004a5.252 5.252 0 016.126 3.537zM8.12 8.464c.307-.338.838-.235 1.066.16l1.732 3a.75.75 0 010 .75l-1.732 3.001c-.229.396-.76.498-1.067.16A5.231 5.231 0 016.75 12c0-1.362.519-2.603 1.37-3.536zM10.878 17.13c-.447-.097-.623-.608-.394-1.003l1.733-3.003a.75.75 0 01.65-.375h3.465c.457 0 .81.408.672.843a5.252 5.252 0 01-6.126 3.538z" />
+                  <path fill-rule="evenodd" d="M21 12.75a.75.75 0 000-1.5h-.783a8.22 8.22 0 00-.237-1.357l.734-.267a.75.75 0 10-.513-1.41l-.735.268a8.24 8.24 0 00-.689-1.191l.6-.504a.75.75 0 10-.964-1.149l-.6.504a8.3 8.3 0 00-1.054-.885l.391-.678a.75.75 0 10-1.299-.75l-.39.677a8.188 8.188 0 00-1.295-.471l.136-.77a.75.75 0 00-1.477-.26l-.136.77a8.364 8.364 0 00-1.377 0l-.136-.77a.75.75 0 10-1.477.26l.136.77c-.448.121-.88.28-1.294.47l-.39-.676a.75.75 0 00-1.3.75l.392.678a8.29 8.29 0 00-1.054.885l-.6-.504a.75.75 0 00-.965 1.149l.6.503a8.243 8.243 0 00-.689 1.192L3.8 8.217a.75.75 0 10-.513 1.41l.735.267a8.222 8.222 0 00-.238 1.355h-.783a.75.75 0 000 1.5h.783c.042.464.122.917.238 1.356l-.735.268a.75.75 0 10.513 1.41l.735-.268c.197.417.428.816.69 1.192l-.6.504a.75.75 0 10.963 1.149l.601-.505c.326.323.679.62 1.054.885l-.392.68a.75.75 0 101.3.75l.39-.679c.414.192.847.35 1.294.471l-.136.771a.75.75 0 101.477.26l.137-.772a8.376 8.376 0 001.376 0l.136.773a.75.75 0 101.477-.26l-.136-.772a8.19 8.19 0 001.294-.47l.391.677a.75.75 0 101.3-.75l-.393-.679a8.282 8.282 0 001.054-.885l.601.504a.75.75 0 10.964-1.15l-.6-.503a8.24 8.24 0 00.69-1.191l.735.268a.75.75 0 10.512-1.41l-.734-.268c.115-.438.195-.892.237-1.356h.784zm-2.657-3.06a6.744 6.744 0 00-1.19-2.053 6.784 6.784 0 00-1.82-1.51A6.704 6.704 0 0012 5.25a6.801 6.801 0 00-1.225.111 6.7 6.7 0 00-2.15.792 6.784 6.784 0 00-2.952 3.489.758.758 0 01-.036.099A6.74 6.74 0 005.251 12a6.739 6.739 0 003.355 5.835l.01.006.01.005a6.706 6.706 0 002.203.802c.007 0 .014.002.021.004a6.792 6.792 0 002.301 0l.022-.004a6.707 6.707 0 002.228-.816 6.781 6.781 0 001.762-1.483l.009-.01.009-.012a6.744 6.744 0 001.18-2.064c.253-.708.39-1.47.39-2.264a6.74 6.74 0 00-.408-2.308z" clip-rule="evenodd" />
+                </svg>
+            </div>
+              <div>
+                <h3 class="text-lg font-bold pb-2 text-gray-800">Tools</h3>
+                <p class="mb-0">A developer guide to tools that can be used in every phase of the lifecycle.</p> 
+              </div>
+            </div>
+          </aside>
+          <aside class="col-span-1 md:col-span-1 min-h-full">
+            <div class="flex">
+              <div class="mr-3 text-orange-600">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                  <path d="M19.5 21a3 3 0 003-3v-4.5a3 3 0 00-3-3h-15a3 3 0 00-3 3V18a3 3 0 003 3h15zM1.5 10.146V6a3 3 0 013-3h5.379a2.25 2.25 0 011.59.659l2.122 2.121c.14.141.331.22.53.22H19.5a3 3 0 013 3v1.146A4.483 4.483 0 0019.5 9h-15a4.483 4.483 0 00-3 1.146z" />
+                </svg>
+            </div>
+              <div>
+                <h3 class="text-lg font-bold pb-2 text-gray-800">Examples</h3>
+                <p class="mb-0">Examples of artifacts created for reference</p> 
+              </div>
+            </div>
+          </aside>
+    </div>
+      </article> 
+    </section>     
+    
+    <section class="px-8 sm:px-6 lg:px-8 bg-cover bg-no-repeat bg-center py-10 bg-image">
+        <article class="mx-auto max-w-6xl py-9 text-white text-center">
+          <h3 class="text-2xl font-semibold pb-5">Netspective is a leader in Technology and Consulting services in regulated markets - Healthcare, Government and Medical Technology.</h3>
+          <p>Technology, consulting, and solutions focused on firms impacted by FDA, ONC, NIST or other safety, privacy, and security regulations.</p>
+        </article>
+      </section>
+    <!-- inner page < ends -->
+    
+    
+    
+    </main>
+</NetspectiveLayout>

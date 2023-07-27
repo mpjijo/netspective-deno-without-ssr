@@ -1,0 +1,372 @@
+---
+import NetspectiveLayout from "../../../layouts/ds/tailwind/NetspectiveLayout.astro";
+import { routes, Route } from "../../../lib/native/route";
+
+export interface Props {
+	readonly route: Route<any, any>;
+}
+
+
+const { route } = Astro.props;
+const r = routes(Astro, Astro.props.route);
+
+---
+
+<NetspectiveLayout route={route} {r}>
+  <main>
+    <!-- inner page > starts -->
+    <section class="px-8 sm:px-6 lg:px-8 bg-cover bg-no-repeat bg-center py-10" style="background-image: url(/assets-natural/brand/www.netspective.com/solutions/header-bg.jpg);">
+      <article class="mx-auto max-w-4xl py-9 text-white text-center">
+        <h3 class="text-2xl md:text-4xl font-semibold pb-5 uppercase">Steering buyers to your products</h3>
+        <p class="text-xl pb-5 font-semibold text-gray-100">Netspective CAK drives targeted online traffic to your properties by delivering high-quality, engaging, customized content designed to educate your customers about your products and services.</p>
+        <div class="grid grid-cols-1 md:grid-cols-6 gap-4">
+          <div></div>
+          <div class="my-2">
+          <a href="/solutions/cak/#research" class="text-white">
+            <p class="mb-1 flex justify-center"><img src={r.uaAssetURL.brand(
+              "/www.netspective.com/solutions/cak/research.png"
+            )} alt="Research"></p>
+            <p class="leading-5">Research</p>
+          </a>
+          </div>
+          <div class="my-2">
+            <a href="/solutions/cak/#assemble" class="text-white">
+              <p class="mb-1 flex justify-center"><img src={r.uaAssetURL.brand(
+                "/www.netspective.com/solutions/cak/assemble.png"
+              )} alt="Assemble"></p>
+              <p class="leading-5">Assemble</p>
+            </a>  
+          </div>
+          <div class="my-2">
+            <a href="/solutions/cak/#curate" class="text-white">
+              <p class="mb-1 flex justify-center"><img src={r.uaAssetURL.brand(
+                "/www.netspective.com/solutions/cak/curate.png"
+              )} alt="Curate"></p>
+              <p class="leading-5">Curate</p>
+            </a>  
+          </div>
+          <div class="my-2">
+            <a href="/solutions/cak/#distribute" class="text-white">
+              <p class="mb-1 flex justify-center"><img src={r.uaAssetURL.brand(
+                "/www.netspective.com/solutions/cak/distribution.png"
+              )} alt="Distribute"></p>
+              <p class="leading-5">Distribute</p>
+            </a>  
+          </div>
+          <div></div>
+        </div>
+      </article>
+    </section>
+    
+    <!-- inner nav > starts -->
+    <section>
+      <nav class="drop-shadow-xl text-white bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-red-600 via-red-900 to-red-900">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="flex h-16 justify-between">
+            <div class="flex">
+              <div class="-ml-2 mr-2 flex items-center md:hidden">
+                <!-- Mobile menu button -->
+                <button type="button" data-collapse-toggle="cak-mobile-menu" class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-controls="cak-mobile-menu" aria-expanded="false">
+                  <span class="sr-only">Open main menu</span>
+                  <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                  </svg>
+                  <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+              <div class="flex flex-shrink-0 items-center uppercase text-xl">
+                <a href="/solutions/cak/" class="text-white">CAK</a>
+              </div>
+              <div class="hidden md:ml-6 md:flex md:space-x-8 text-base font-normal">
+                <a href="/solutions/cak/#why-cak" class="inline-flex items-center px-1 pt-1 text-gray-300">Why CAK?</a>
+                <a href="/solutions/cak/#what-is-cak" class="inline-flex items-center px-1 pt-1 text-white hover:text-gray-300">What is it?</a>
+                <a href="/solutions/cak/#research" class="inline-flex items-center px-1 pt-1 text-white hover:text-gray-300">Features</a>
+                <a href="/solutions/cak/#clients" class="inline-flex items-center px-1 pt-1 text-white hover:text-gray-300">Clients</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Mobile menu, show/hide based on menu state. -->
+        <div class="md:hidden hidden" id="cak-mobile-menu">
+          <div class="space-y-1 pb-3 pt-2">
+            <a href="/solutions/cak/#why-cak" class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-white hover:border-red-400 hover:bg-gray-50 hover:text-gray-800">Why CAK?</a>
+            <a href="/solutions/cak/#what-is-cak" class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-white hover:border-red-400 hover:bg-gray-50 hover:text-gray-800">What is it?</a>
+            <a href="/solutions/cak/#research" class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-white hover:border-red-400 hover:bg-gray-50 hover:text-gray-800">Features</a>
+            <a href="/solutions/cak/#clients" class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-white hover:border-red-400 hover:bg-gray-50 hover:text-gray-800">Clients</a>
+          </div>
+        </div>
+      </nav>
+    </section>
+    <!-- inner nav < ends -->
+    
+    <section class="mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8 mb-8">                     
+    
+      <div id="why-cak" class="border border-x-0 border-t-0 border-gray-100">
+        <article class="pt-10 pb-9">
+          <div class="text-center">
+            <h3 class="text-2xl font-bold mb-10 text-center inline-flex"><span class="bg-orange-600 text-white py-2 px-8">Why Netspective CAK?</span></h3>  
+          </div>
+          <p><b>Have a great product or service but no marketing staff?</b></p>
+          <p><b>It might be time to DIY.</b></p>
+          <p>Does enterprise selling come naturally to your staff? Do you have the expertise to pull off a full-bodied content marketing campaign?</p>
+          <p>If not, no worries! There's another, proven path to content marketing success.</p>
+          <p>The Netspective™ Content Assembler Kit helps you avoid the time, costs and hassles of content marketing.</p>
+          <ul class="list-disc ml-8 mb-4">
+            <li class="mb-2">Guides you through content assembly, curation and distribution tasks, step by step.</li>
+            <li class="mb-2">Provides all the tools, services you need for content marketing success.</li>
+            <li class="mb-2">Automates time-consuming content search and distribution tasks.</li>
+            <li class="mb-2">Does online research to find the right content for your marketing goals and audience.</li>
+            <li class="mb-2">Gathers and distributes content on many topics from many sources, without your having to create or look for it yourself.</li>
+            <li class="mb-2">Provides your audience with engaging content—even if you have no specialized marketing skills or experience.</li>
+          </ul>
+          <p>In short, the CAK helps you launch successful content marketing campaigns, even if there's not a marketing professional in sight.</p>
+        </article>
+      </div>
+
+      <div id="" class="border border-x-0 border-t-0 border-gray-100">
+        <article class="mb-9">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 text-center">
+              <aside class="bg-sky-600 text-white p-7 min-h-full">
+                  <div class="text-lg font-medium leading-6 py-2">Business Services</div>
+                  <div class="flex justify-center mt-4 mb-5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-14 h-14">
+                      <path fill-rule="evenodd" d="M3 6a3 3 0 013-3h12a3 3 0 013 3v12a3 3 0 01-3 3H6a3 3 0 01-3-3V6zm4.5 7.5a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0v-2.25a.75.75 0 01.75-.75zm3.75-1.5a.75.75 0 00-1.5 0v4.5a.75.75 0 001.5 0V12zm2.25-3a.75.75 0 01.75.75v6.75a.75.75 0 01-1.5 0V9.75A.75.75 0 0113.5 9zm3.75-1.5a.75.75 0 00-1.5 0v9a.75.75 0 001.5 0v-9z" clip-rule="evenodd" />
+                    </svg>
+                  </div>
+                  <p class="mb-2">Boost sales, improve online traffic, maximize marketing reach with high-quality customized content</p>
+              </aside>
+              <aside class="bg-rose-600 text-white p-7 min-h-full">
+                <div class="text-lg font-medium leading-6 py-2">Communications & Media</div>
+                <div class="flex justify-center mt-4 mb-5">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-14 h-14">
+                    <path fill-rule="evenodd" d="M4.804 21.644A6.707 6.707 0 006 21.75a6.721 6.721 0 003.583-1.029c.774.182 1.584.279 2.417.279 5.322 0 9.75-3.97 9.75-9 0-5.03-4.428-9-9.75-9s-9.75 3.97-9.75 9c0 2.409 1.025 4.587 2.674 6.192.232.226.277.428.254.543a3.73 3.73 0 01-.814 1.686.75.75 0 00.44 1.223zM8.25 10.875a1.125 1.125 0 100 2.25 1.125 1.125 0 000-2.25zM10.875 12a1.125 1.125 0 112.25 0 1.125 1.125 0 01-2.25 0zm4.875-1.125a1.125 1.125 0 100 2.25 1.125 1.125 0 000-2.25z" clip-rule="evenodd" />
+                  </svg>              
+                </div>
+                <p class="mb-2">Tools and services to manage social networks, analyze social media traffic and engage with influencers.</p>
+              </aside>
+              <aside class="bg-orange-600 text-white p-7 min-h-full">
+                  <div class="text-lg font-medium leading-6 py-2">Education</div>
+                  <div class="flex justify-center mt-4 mb-5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-14 h-14">
+                      <path d="M11.7 2.805a.75.75 0 01.6 0A60.65 60.65 0 0122.83 8.72a.75.75 0 01-.231 1.337 49.949 49.949 0 00-9.902 3.912l-.003.002-.34.18a.75.75 0 01-.707 0A50.009 50.009 0 007.5 12.174v-.224c0-.131.067-.248.172-.311a54.614 54.614 0 014.653-2.52.75.75 0 00-.65-1.352 56.129 56.129 0 00-4.78 2.589 1.858 1.858 0 00-.859 1.228 49.803 49.803 0 00-4.634-1.527.75.75 0 01-.231-1.337A60.653 60.653 0 0111.7 2.805z" />
+                      <path d="M13.06 15.473a48.45 48.45 0 017.666-3.282c.134 1.414.22 2.843.255 4.285a.75.75 0 01-.46.71 47.878 47.878 0 00-8.105 4.342.75.75 0 01-.832 0 47.877 47.877 0 00-8.104-4.342.75.75 0 01-.461-.71c.035-1.442.121-2.87.255-4.286A48.4 48.4 0 016 13.18v1.27a1.5 1.5 0 00-.14 2.508c-.09.38-.222.753-.397 1.11.452.213.901.434 1.346.661a6.729 6.729 0 00.551-1.608 1.5 1.5 0 00.14-2.67v-.645a48.549 48.549 0 013.44 1.668 2.25 2.25 0 002.12 0z" />
+                      <path d="M4.462 19.462c.42-.419.753-.89 1-1.394.453.213.902.434 1.347.661a6.743 6.743 0 01-1.286 1.794.75.75 0 11-1.06-1.06z" />
+                    </svg>         
+                  </div>
+                  <p class="mb-2">Offer content the audience desires at consistent and regular intervals.</p>
+              </aside>
+              <aside class="bg-lime-600 text-white p-7 min-h-full">
+                <div class="text-lg font-medium leading-6 py-2">Financial Services</div>
+                <div class="flex justify-center mt-4 mb-5">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-14 h-14">
+                    <path d="M10.464 8.746c.227-.18.497-.311.786-.394v2.795a2.252 2.252 0 01-.786-.393c-.394-.313-.546-.681-.546-1.004 0-.323.152-.691.546-1.004zM12.75 15.662v-2.824c.347.085.664.228.921.421.427.32.579.686.579.991 0 .305-.152.671-.579.991a2.534 2.534 0 01-.921.42z" />
+                    <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM12.75 6a.75.75 0 00-1.5 0v.816a3.836 3.836 0 00-1.72.756c-.712.566-1.112 1.35-1.112 2.178 0 .829.4 1.612 1.113 2.178.502.4 1.102.647 1.719.756v2.978a2.536 2.536 0 01-.921-.421l-.879-.66a.75.75 0 00-.9 1.2l.879.66c.533.4 1.169.645 1.821.75V18a.75.75 0 001.5 0v-.81a4.124 4.124 0 001.821-.749c.745-.559 1.179-1.344 1.179-2.191 0-.847-.434-1.632-1.179-2.191a4.122 4.122 0 00-1.821-.75V8.354c.29.082.559.213.786.393l.415.33a.75.75 0 00.933-1.175l-.415-.33a3.836 3.836 0 00-1.719-.755V6z" clip-rule="evenodd" />
+                  </svg>          
+                </div>
+                <p class="mb-2">Cater to the needs of an evolving audience while generating revenue and increasing your market share.</p>
+              </aside>
+              <aside class="bg-green-600 text-white p-7 min-h-full">
+                <div class="text-lg font-medium leading-6 py-2">Technology</div>
+                <div class="flex justify-center mt-4 mb-5">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-14 h-14">
+                    <path d="M17.004 10.407c.138.435-.216.842-.672.842h-3.465a.75.75 0 01-.65-.375l-1.732-3c-.229-.396-.053-.907.393-1.004a5.252 5.252 0 016.126 3.537zM8.12 8.464c.307-.338.838-.235 1.066.16l1.732 3a.75.75 0 010 .75l-1.732 3.001c-.229.396-.76.498-1.067.16A5.231 5.231 0 016.75 12c0-1.362.519-2.603 1.37-3.536zM10.878 17.13c-.447-.097-.623-.608-.394-1.003l1.733-3.003a.75.75 0 01.65-.375h3.465c.457 0 .81.408.672.843a5.252 5.252 0 01-6.126 3.538z" />
+                    <path fill-rule="evenodd" d="M21 12.75a.75.75 0 000-1.5h-.783a8.22 8.22 0 00-.237-1.357l.734-.267a.75.75 0 10-.513-1.41l-.735.268a8.24 8.24 0 00-.689-1.191l.6-.504a.75.75 0 10-.964-1.149l-.6.504a8.3 8.3 0 00-1.054-.885l.391-.678a.75.75 0 10-1.299-.75l-.39.677a8.188 8.188 0 00-1.295-.471l.136-.77a.75.75 0 00-1.477-.26l-.136.77a8.364 8.364 0 00-1.377 0l-.136-.77a.75.75 0 10-1.477.26l.136.77c-.448.121-.88.28-1.294.47l-.39-.676a.75.75 0 00-1.3.75l.392.678a8.29 8.29 0 00-1.054.885l-.6-.504a.75.75 0 00-.965 1.149l.6.503a8.243 8.243 0 00-.689 1.192L3.8 8.217a.75.75 0 10-.513 1.41l.735.267a8.222 8.222 0 00-.238 1.355h-.783a.75.75 0 000 1.5h.783c.042.464.122.917.238 1.356l-.735.268a.75.75 0 10.513 1.41l.735-.268c.197.417.428.816.69 1.192l-.6.504a.75.75 0 10.963 1.149l.601-.505c.326.323.679.62 1.054.885l-.392.68a.75.75 0 101.3.75l.39-.679c.414.192.847.35 1.294.471l-.136.771a.75.75 0 101.477.26l.137-.772a8.376 8.376 0 001.376 0l.136.773a.75.75 0 101.477-.26l-.136-.772a8.19 8.19 0 001.294-.47l.391.677a.75.75 0 101.3-.75l-.393-.679a8.282 8.282 0 001.054-.885l.601.504a.75.75 0 10.964-1.15l-.6-.503a8.24 8.24 0 00.69-1.191l.735.268a.75.75 0 10.512-1.41l-.734-.268c.115-.438.195-.892.237-1.356h.784zm-2.657-3.06a6.744 6.744 0 00-1.19-2.053 6.784 6.784 0 00-1.82-1.51A6.704 6.704 0 0012 5.25a6.801 6.801 0 00-1.225.111 6.7 6.7 0 00-2.15.792 6.784 6.784 0 00-2.952 3.489.758.758 0 01-.036.099A6.74 6.74 0 005.251 12a6.739 6.739 0 003.355 5.835l.01.006.01.005a6.706 6.706 0 002.203.802c.007 0 .014.002.021.004a6.792 6.792 0 002.301 0l.022-.004a6.707 6.707 0 002.228-.816 6.781 6.781 0 001.762-1.483l.009-.01.009-.012a6.744 6.744 0 001.18-2.064c.253-.708.39-1.47.39-2.264a6.74 6.74 0 00-.408-2.308z" clip-rule="evenodd" />
+                  </svg>        
+                </div>
+                <p class="mb-2">Allows your brand to be perceived as valuable. Allows more potential customers to find you easily.</p>
+              </aside>
+              <aside class="bg-blue-800 text-white p-7 min-h-full">
+                  <div class="text-lg font-medium leading-6 py-2">Healthcare</div>
+                  <div class="flex justify-center mt-4 mb-5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-14 h-14">
+                      <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM12.75 9a.75.75 0 00-1.5 0v2.25H9a.75.75 0 000 1.5h2.25V15a.75.75 0 001.5 0v-2.25H15a.75.75 0 000-1.5h-2.25V9z" clip-rule="evenodd" />
+                    </svg>      
+                  </div>
+                  <p class="mb-2">Drive quality traffic to your site with content your patients want.</p>
+              </aside>
+              <aside class="bg-rose-600 text-white p-7 min-h-full">
+                <div class="text-lg font-medium leading-6 py-2 uppercase">B2B/B2C</div>
+                <div class="flex justify-center mt-4 mb-5">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-14 h-14">
+                    <path d="M7.493 18.75c-.425 0-.82-.236-.975-.632A7.48 7.48 0 016 15.375c0-1.75.599-3.358 1.602-4.634.151-.192.373-.309.6-.397.473-.183.89-.514 1.212-.924a9.042 9.042 0 012.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 00.322-1.672V3a.75.75 0 01.75-.75 2.25 2.25 0 012.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 01-2.649 7.521c-.388.482-.987.729-1.605.729H14.23c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 00-1.423-.23h-.777zM2.331 10.977a11.969 11.969 0 00-.831 4.398 12 12 0 00.52 3.507c.26.85 1.084 1.368 1.973 1.368H4.9c.445 0 .72-.498.523-.898a8.963 8.963 0 01-.924-3.977c0-1.708.476-3.305 1.302-4.666.245-.403-.028-.959-.5-.959H4.25c-.832 0-1.612.453-1.918 1.227z" />
+                  </svg>    
+                </div>
+                <p class="mb-2">Helps generate revenue and customer retention. Increases customer conversion rates.</p>
+              </aside>
+              <aside class="bg-pink-600 text-white p-7 min-h-full">
+                <div class="text-lg font-medium leading-6 py-2">Small/Medium</div>
+                <div class="flex justify-center mt-4 mb-5">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-14 h-14">
+                    <path d="M12.378 1.602a.75.75 0 00-.756 0L3 6.632l9 5.25 9-5.25-8.622-5.03zM21.75 7.93l-9 5.25v9l8.628-5.032a.75.75 0 00.372-.648V7.93zM11.25 22.18v-9l-9-5.25v8.57a.75.75 0 00.372.648l8.628 5.033z" />
+                  </svg>
+                </div>
+                <p class="mb-2">Builds brand recognition, credibility and trust among the targeted audience.</p>
+              </aside>
+              <aside class="bg-yellow-500 text-white p-7 min-h-full">
+                <div class="text-lg font-medium leading-6 py-2">Enterprise</div>
+                <div class="flex justify-center mt-4 mb-5">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-14 h-14">
+                    <path fill-rule="evenodd" d="M7.502 6h7.128A3.375 3.375 0 0118 9.375v9.375a3 3 0 003-3V6.108c0-1.505-1.125-2.811-2.664-2.94a48.972 48.972 0 00-.673-.05A3 3 0 0015 1.5h-1.5a3 3 0 00-2.663 1.618c-.225.015-.45.032-.673.05C8.662 3.295 7.554 4.542 7.502 6zM13.5 3A1.5 1.5 0 0012 4.5h4.5A1.5 1.5 0 0015 3h-1.5z" clip-rule="evenodd" />
+                    <path fill-rule="evenodd" d="M3 9.375C3 8.339 3.84 7.5 4.875 7.5h9.75c1.036 0 1.875.84 1.875 1.875v11.25c0 1.035-.84 1.875-1.875 1.875h-9.75A1.875 1.875 0 013 20.625V9.375zM6 12a.75.75 0 01.75-.75h.008a.75.75 0 01.75.75v.008a.75.75 0 01-.75.75H6.75a.75.75 0 01-.75-.75V12zm2.25 0a.75.75 0 01.75-.75h3.75a.75.75 0 010 1.5H9a.75.75 0 01-.75-.75zM6 15a.75.75 0 01.75-.75h.008a.75.75 0 01.75.75v.008a.75.75 0 01-.75.75H6.75a.75.75 0 01-.75-.75V15zm2.25 0a.75.75 0 01.75-.75h3.75a.75.75 0 010 1.5H9a.75.75 0 01-.75-.75zM6 18a.75.75 0 01.75-.75h.008a.75.75 0 01.75.75v.008a.75.75 0 01-.75.75H6.75a.75.75 0 01-.75-.75V18zm2.25 0a.75.75 0 01.75-.75h3.75a.75.75 0 010 1.5H9a.75.75 0 01-.75-.75z" clip-rule="evenodd" />
+                  </svg>    
+                </div>
+                <p class="mb-2">Reaching out to an ever growing audience that consumes or influences your content.</p>
+              </aside>
+            </div>
+        </article> 
+      </div>
+
+      <div id="what-is-cak" class="border border-x-0 border-t-0 border-gray-100">
+        <article class="pt-10 pb-9">
+          <div class="text-center">
+            <h3 class="text-2xl font-bold mb-10 text-center inline-flex"><span class="bg-orange-600 text-white py-2 px-8">What is Netspective CAK?</span></h3>
+          </div>          
+          <p><b>A Content Marketing Team that Never Sleeps</b></p>
+          <p>The Netspective™ Content Assembler Kit is a platform that takes the effort and costs out of launching effective, modern content marketing campaigns. It provides the information and know-how you need to engage customers and prospects and gain their attention and trust.</p>
+          <p>Think of CAK as your marketing team in a box. Use it to:</p>
+          <ul class="list-disc ml-8 mb-4">
+            <li class="mb-2">Provide everything you need to assemble, curate and distribute content that will engage current and future customers.</li>
+            <li class="mb-2">Offer the variety and volume of information that successful enterprise selling requires.</li>
+            <li class="mb-2">Avoid the costs of third-party consultants and marketers.</li>
+            <li class="mb-2">Deliver the content most likely to engage your customers at every stage of the buying process.</li>
+          </ul>
+          <p>When you use the CAK, your prospects and customers will enjoy a steady stream of authoritative content and be more likely to become or remain a customer.</p>
+          <div class="flex justify-center mt-7"><img src={r.uaAssetURL.brand(
+            "/www.netspective.com/solutions/cak/Netspective-Content-Assembler-Kit-Diagram.jpg"
+          )} alt=""></div>
+        </article>
+      </div>
+
+      <div id="research" class="border border-x-0 border-t-0 border-gray-100">
+        <article class="pt-10 pb-5">
+          <div class="text-center">
+            <h3 class="text-2xl font-bold mb-10 text-center inline-flex"><span class="bg-orange-600 text-white py-2 px-8">Research</span></h3>
+          </div>          
+          <p><b>Marketing Relief for Busy Businesses</b></p>
+          <p>The CAK is packed with software, tools and automated processes designed for businesses wanting to take control of their content marketing effort. But this approach might not be the best choice for your organization.</p>
+          <p>If you want to delegate content marketing chores, we can help. We have the marketing skills, experience and tools that can get results without adding to your crowded schedule.</p>
+          <p>In each engagement, we put these marketing resources to work for you:</p>
+          <ul class="list-disc ml-8 mb-4">
+            <li class="mb-2"><b>Data discovery experts,</b> who use SEO, SMO and other skills to find just the right content for your customers.</li>
+            <li class="mb-2"><b>Talented marketing writers,</b> who can contribute their fresh ideas to existing material.</li>
+            <li class="mb-2"><b>The latest in automated digital tools,</b> which we use to distribute content to social media networks and many other digital channels.</li>
+          </ul>
+          <p>When we're done, you'll have a steady stream of carefully chosen and updated content, customized to your to the interests of your audience.</p>
+        </article>
+      </div>
+
+      <div id="assemble" class="border border-x-0 border-t-0 border-gray-100">
+        <article class="pt-10 pb-9">
+          <div class="text-center">
+            <h3 class="text-2xl font-bold mb-10 text-center inline-flex"><span class="bg-orange-600 text-white py-2 px-8">Assemble</span></h3>
+          </div>
+          <p><b>High-Quality Marketing Content:</b></p>
+          <p><b>The “Open, Sesame!” of Modern Selling</b></p>
+          <p>Successful enterprise selling demands content. Lots of it. Brochures, sell sheets, webinars, demonstrations, videos, the list goes on and on. And the amount of it you'll need to turn prospects into customers might surprise you.</p>
+          <ul class="list-disc ml-8 mb-4">
+            <li class="mb-2">The CAK helps you find and assemble relevant, high-quality content for your marketing campaigns. It's the content you'll need to engage prospects in the all-important first step of the buying process.</li>
+            <li class="mb-2">The CAK collects many types of unique and curated content.</li>
+            <li class="mb-2">You start the assembly process by identifying the business goals, core audience and industry focus for each marketing campaign. The CAK automates the process by:</li>
+          </ul>
+          <ul class="list-disc ml-8 pl-8 mb-4">
+            <li class="mb-2">Performing keyword research, generating keywords and competitor organizations to use or avoid.</li>
+            <li class="mb-2">Using these keywords to identify your target audience and the types of content most likely to engage them.</li>
+            <li class="mb-2">Linking to the feeds that provide targeted content.</li>
+          </ul>
+          <p>So, you can spend minutes, not days looking for just the right content that helps meet your marketing goals.</p>
+          <div class="flex justify-center mt-7"><img src={r.uaAssetURL.brand(
+            "/www.netspective.com/solutions/cak/CAK-1.png"
+          )} alt=""></div>
+        </article>
+      </div>
+
+      <div id="curate" class="border border-x-0 border-t-0 border-gray-100">
+        <article class="pt-10 pb-9">
+          <div class="text-center">
+            <h3 class="text-2xl font-bold mb-10 text-center"><span class="bg-orange-600 text-white py-2 px-8">Curate</span></h3>
+          </div>
+          <div class="flex justify-center mt-7 mb-7"><img src={r.uaAssetURL.brand(
+            "/www.netspective.com/solutions/cak/cak-curate.jpg"
+          )} alt=""></div>
+          <p><b>Add Your Voice to Make Content Fresh and Interesting</b></p>
+          <p>Content marketing is a powerful way to engage your audience with unique, compelling information and ideas. But to be effective, content must be fresh and interesting, chosen carefully and aimed at just the right audience.</p>
+          <p>The Netspective Content Assembler Kit helps you add your unique voice and views to carefully chosen content. Curated content:</p>
+          <ul class="list-disc ml-8 mb-4">
+            <li class="mb-2"><b>Adds value</b> and the human touch to content by providing a new perspective—yours.</li>
+            <li class="mb-2"><b>Makes content more appealing</b> to your audience by adjusting content to fit your chosen media platform.</li>
+            <li class="mb-2"><b>Makes lead generation easier</b> by reusing newsletter and other curated content.</li>
+          </ul>
+          <p>Engage in the digital curation process by:</p>
+          <ul class="list-disc ml-8 mb-4">
+            <li class="mb-2"><b>Discovering</b> digital curators, who you can learn from.</li>
+            <li class="mb-2"><b>Actively exploring</b> the Internet to find many types of content from many sources.</li>
+            <li class="mb-2"><b>Carefully selecting</b> digital breadcrumbs of inspiring content.</li>
+            <li class="mb-2"><b>Discarding</b> everything but the most relevant and engaging content.</li>
+            <li class="mb-2"><b>Enriching</b> content with your own ideas and experience.</li>
+          </ul>
+          <p>When you're finished, you'll get satisfying results: Relevant, engaging content that your audience will value and trust.</p>
+        </article>
+      </div>
+
+      <div id="distribute" class="border border-x-0 border-t-0 border-gray-100">
+        <article class="pt-10 pb-9">
+          <div class="text-center">
+            <h3 class="text-2xl font-bold mb-10 text-center inline-flex"><span class="bg-orange-600 text-white py-2 px-8">Distribute</span></h3>
+          </div>          
+          <h4 class="text-xl font-semibold pb-5 text-gray-800 text-center">Say Good-bye to Manual Content Distribution</h4>
+          <div class="flex justify-center mt-7 mb-7"><img src={r.uaAssetURL.brand(
+            "/www.netspective.com/solutions/cak/cak-Distribute.jpg"
+          )} alt=""></div>
+          <p>The Netspective Content Assembler Kit helps you provide your audience with well-organized, attractive content and distribute it broadly where they want to find it.</p>
+          <p>CAK tools, services and automated processes eliminate the time and attention you would spend distributing content manually. Use CAK tools and services to:</p>
+          <ul class="list-disc ml-8 mb-4">
+            <li class="mb-2"><b>Distribute content automatically</b> across social network and traditional Internet channels.</li>
+            <li class="mb-2"><b>Increase your marketing reach</b> by sending content to buyers, stakeholders, channel partners and influencers through social media sites.</li>
+            <li class="mb-2"><b>Distribute content to high-traffic destinations,</b> which you identify through social media analysis.</li>
+            <li class="mb-2"><b>Keep content fresh</b> by scheduling new content distributions at regular intervals.</li>
+            <li class="mb-2"><b>Schedule content distributions</b> daily, weekly, monthly—at any interval that you require.</li>
+          </ul>
+          <p>The kit builds in all the tools, services and know-how you need for content marketing success.</p>
+        </article>
+      </div>
+
+      <div id="clients" class="">
+        <article class="pt-10">
+          <div class="text-center">
+            <h3 class="text-2xl font-bold mb-10 text-center inline-flex"><span class="bg-orange-600 text-white py-2 px-8">Clients</span></h3>
+          </div>          
+          <div class="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-5 gap-4 text-center">
+            <div class="col-span-1 md:col-span-1 min-h-full border border-gray-100 p-5">
+              <aside class="flex justify-center items-center flex-wrap flex-col">
+                    <img src={r.uaAssetURL.brand(
+                      "/www.netspective.com/solutions/cak/Netspective-Communications.jpg"
+                    )} alt="" class="h-12 object-contain grayscale hover:grayscale-0">
+              </aside>
+            </div>
+            <div class="col-span-1 md:col-span-1 min-h-full border border-gray-100 p-5">
+              <aside class="flex justify-center items-center flex-wrap flex-col">
+                    <img src={r.uaAssetURL.brand(
+                      "/www.netspective.com/solutions/cak/Aliim.jpg"
+                    )} alt="" class="h-12 object-contain grayscale hover:grayscale-0">
+              </aside>
+            </div>
+
+            </div>
+        </article>
+      </div>
+    
+    </section>
+    
+    <section class="px-8 sm:px-6 lg:px-8 bg-cover bg-no-repeat bg-center py-10 bg-image">
+        <article class="mx-auto max-w-6xl py-9 text-white text-center">
+          <h3 class="text-2xl font-semibold pb-5">Netspective is a leader in Technology and Consulting services in regulated markets - Healthcare, Government and Medical Technology.</h3>
+          <p>Technology, consulting, and solutions focused on firms impacted by FDA, ONC, NIST or other safety, privacy, and security regulations.</p>
+        </article>
+    </section>
+    <!-- inner page < ends -->
+  </main>
+  <div class="clear-both"></div>
+</NetspectiveLayout>

@@ -1,0 +1,303 @@
+---
+import { routes, Route } from "../../../lib/native/route";
+
+export interface Props {
+	readonly route: Route<any, any>;
+}
+
+const r = routes(Astro, Astro.props.route);
+---
+<header>
+    <section class="bg-red-900 text-white">
+      <article class="mx-auto max-w-7xl px-4 pt-1 pb-0 sm:px-6 lg:px-8">
+        <div class="flex flex-wrap gap-3 justify-end">
+          <a href="https://plus.google.com/+Netspective" target="_blank"><button class="inline-flex items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="w-4 h-4 fill-white" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 0C5.372 0 0 5.373 0 12s5.372 12 12 12c6.627 0 12-5.373 12-12S18.627 0 12 0zm.14 19.018c-3.868 0-7-3.14-7-7.018c0-3.878 3.132-7.018 7-7.018c1.89 0 3.47.697 4.682 1.829l-1.974 1.978v-.004c-.735-.702-1.667-1.062-2.708-1.062c-2.31 0-4.187 1.956-4.187 4.273c0 2.315 1.877 4.277 4.187 4.277c2.096 0 3.522-1.202 3.816-2.852H12.14v-2.737h6.585c.088.47.135.96.135 1.474c0 4.01-2.677 6.86-6.72 6.86z" fill="currentColor"></path></g></svg>
+          </button></a>
+      
+          <a href="https://www.linkedin.com/company/netspective-communications-llc" target="_blank"><button class="inline-flex items-center space-x-2">
+            <svg class="w-4 h-4 fill-white" role="img" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+              <g><path d="M218.123122,218.127392 L180.191928,218.127392 L180.191928,158.724263 C180.191928,144.559023 179.939053,126.323993 160.463756,126.323993 C140.707926,126.323993 137.685284,141.757585 137.685284,157.692986 L137.685284,218.123441 L99.7540894,218.123441 L99.7540894,95.9665207 L136.168036,95.9665207 L136.168036,112.660562 L136.677736,112.660562 C144.102746,99.9650027 157.908637,92.3824528 172.605689,92.9280076 C211.050535,92.9280076 218.138927,118.216023 218.138927,151.114151 L218.123122,218.127392 Z M56.9550587,79.2685282 C44.7981969,79.2707099 34.9413443,69.4171797 34.9391618,57.260052 C34.93698,45.1029244 44.7902948,35.2458562 56.9471566,35.2436736 C69.1040185,35.2414916 78.9608713,45.0950217 78.963054,57.2521493 C78.9641017,63.090208 76.6459976,68.6895714 72.5186979,72.8184433 C68.3913982,76.9473153 62.7929898,79.26748 56.9550587,79.2685282 M75.9206558,218.127392 L37.94995,218.127392 L37.94995,95.9665207 L75.9206558,95.9665207 L75.9206558,218.127392 Z M237.033403,0.0182577091 L18.8895249,0.0182577091 C8.57959469,-0.0980923971 0.124827038,8.16056231 -0.001,18.4706066 L-0.001,237.524091 C0.120519052,247.839103 8.57460631,256.105934 18.8895249,255.9977 L237.033403,255.9977 C247.368728,256.125818 255.855922,247.859464 255.999,237.524091 L255.999,18.4548016 C255.851624,8.12438979 247.363742,-0.133792868 237.033403,0.000790807055"></path></g>
+            </svg>
+          </button></a>
+      
+          <a href="https://feeds.feedburner.com/Netspective" target="_blank"><button class="text-white inline-flex items-center">
+            <svg class="w-4 h-4 fill-white" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path fill-rule="evenodd" d="M3.75 4.5a.75.75 0 01.75-.75h.75c8.284 0 15 6.716 15 15v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75C18 11.708 12.292 6 5.25 6H4.5a.75.75 0 01-.75-.75V4.5zm0 6.75a.75.75 0 01.75-.75h.75a8.25 8.25 0 018.25 8.25v.75a.75.75 0 01-.75.75H12a.75.75 0 01-.75-.75v-.75a6 6 0 00-6-6H4.5a.75.75 0 01-.75-.75v-.75zm0 7.5a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z" clip-rule="evenodd" />
+            </svg>      
+          </button></a>
+      
+          <a href="https://twitter.com/netspective" target="_blank"><button class="inline-flex items-center">
+            <svg class="w-4 h-4 fill-white" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"></path></svg>
+          </button></a>
+        </div>
+      </article>
+      </section>
+
+      <nav class="bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-red-600 via-red-900 to-red-900 py-5 text-white text-base shadow">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+          <a href="/" class="flex items-center">
+              <img src={r.uaAssetURL.brand(
+								"/www.netspective.com/logo.png"
+							)} class="h-8 mr-3" alt="Flowbite Logo" />
+          </a>
+          <button data-collapse-toggle="navbar-multi-level" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-multi-level" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+          </button>
+          <div class="hidden w-full md:block md:w-auto z-20" id="navbar-multi-level">
+            <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0">
+              <li>
+                <button id="AboutUsNavbarLink" data-dropdown-toggle="AboutUsNavbar" class="flex items-center justify-between w-full py-2 pl-3 pr-4 md:p-0 text-white  hover:border-gray-300 hover:text-stone-200"><a href="/about-us/">About Us</a> <svg class="w-5 h-5 ml-1" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
+                <div id="AboutUsNavbar" class="z-10 hidden font-normal bg-gray-50 divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+                  <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="AboutUsNavbarLink">
+                    <li>
+                      <a href="/about-us/team/" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Our Team</a>
+                    </li>
+                    <li>
+                      <a href="/about-us/clients/" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Clients</a>
+                    </li>
+                    <li>
+                      <a href="/about-us/events/" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Events</a>
+                    </li>
+                    <li>
+                      <a href="/about-us/newsroom/" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">News Room</a>
+                    </li>
+                    <li>
+                      <a href="/about-us/netspective-tv/" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Netspective.TV</a>
+                    </li>
+                    <li>
+                      <a href="/about-us/contact/" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Contact US</a>
+                    </li>
+                  </ul>
+              </div>
+              </li>
+              <li>
+                <button id="IndustriesNavbarLink" data-dropdown-toggle="IndustriesNavbar" class="flex items-center justify-between w-full py-2 pl-3 pr-4 md:p-0 text-white  hover:border-gray-300 hover:text-stone-200"><a href="/industries/healthcare/">Industries</a> <svg class="w-5 h-5 ml-1" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
+                <div id="IndustriesNavbar" class="z-10 hidden font-normal bg-gray-50 divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+                  <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="IndustriesNavbarLink">
+                    <li>
+                      <a href="/industries/healthcare/" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Healthcare</a>
+                    </li>
+                    <li>
+                      <a href="/industries/government/" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Government</a>
+                    </li>
+                    <li>
+                      <a href="/industries/medical-technology/" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Medical Technology</a>
+                    </li>
+                  </ul>
+              </div>
+              </li>
+              <li>
+                  <button id="TechnologyNavbarLink" data-dropdown-toggle="TechnologyNavbar" class="flex items-center justify-between w-full py-2 pl-3 pr-4 md:p-0 text-white  hover:border-gray-300 hover:text-stone-200"><a href="/technology-services/">Technology Services</a> <svg class="w-5 h-5 ml-1" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
+                  <!-- Dropdown menu -->
+                  <div id="TechnologyNavbar" class="z-10 hidden font-normal bg-gray-50 divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+                      <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
+                        <li>
+                          <button id="DevelopmentDropdownButton" data-dropdown-toggle="DevelopmentDropdown" data-dropdown-placement="right-start" type="button" class="flex items-center justify-between w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"><a href="/technology-services/development/">Development</a> <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg></button>
+                          <div id="DevelopmentDropdown" class="drop-down-position z-10 hidden bg-gray-50 divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                              <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="DevelopmentDropdownButton">
+                                <li>
+                                  <a href="/technology-services/development/architecture/" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Architecture</a>
+                                </li>
+                                <li>
+                                  <a href="/technology-services/development/coding-and-engineering/" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Coding and Engineering</a>
+                                </li>
+                                <li>
+                                  <a href="/technology-services/development/ui-id/" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">U.I. & I.D.</a>
+                                </li>
+                                <li>
+                                  <a href="/technology-services/development/integration/" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Integration</a>
+                                </li>
+                                <li>
+                                  <a href="/technology-services/development/web-2-0/" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Web 2.0</a>
+                                </li>
+                                <li>
+                                  <a href="/technology-services/development/mobility/" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Mobility</a>
+                                </li>
+                              </ul>
+                          </div>
+                        </li>
+                        <li>
+                          <button id="TestingDropdownButton" data-dropdown-toggle="TestingDropdown" data-dropdown-placement="right-start" type="button" class="flex items-center justify-between w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"><a href="/technology-services/testing/">Testing</a><svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg></button>
+                          <div id="TestingDropdown" class="drop-down-position z-10 hidden bg-gray-50 divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                              <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="TestingDropdownButton">
+                                <li>
+                                  <a href="/technology-services/testing/iv-v/" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">IV & V</a>
+                                </li>
+                                <li>
+                                  <a href="/technology-services/testing/test-automation/" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Test Automation</a>
+                                </li>
+                                <li>
+                                  <a href="/technology-services/testing/compliance/" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">compliance</a>
+                                </li>
+                              </ul>
+                          </div>
+                        </li>
+                        <li>
+                          <!-- <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sustenance</a> -->
+                          <button id="SustenanceDropdownButton" data-dropdown-toggle="SustenanceDropdown" data-dropdown-placement="right-start" type="button" class="flex items-center justify-between w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"><a href="/technology-services/sustenance/">Sustenance</a> <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg></button>
+                          <div id="SustenanceDropdown" class="drop-down-position z-10 hidden bg-gray-50 divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                              <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="SustenanceDropdownButton">
+                                <li>
+                                  <a href="/technology-services/sustenance/platform/" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Platform</a>
+                                </li>
+                                <li>
+                                  <a href="/technology-services/sustenance/product-or-application/" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Product Or Application</a>
+                                </li>
+                                <li>
+                                  <a href="/technology-services/sustenance/legacy-modernization/" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Legacy Modernization</a>
+                                </li>
+                              </ul>
+                          </div>
+                        </li>
+                        <li>
+                          <button id="DeploymentDropdownButton" data-dropdown-toggle="DeploymentDropdown" data-dropdown-placement="right-start" type="button" class="flex items-center justify-between w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"><a href="/technology-services/deployment/">Deployment</a><svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg></button>
+                          <div id="DeploymentDropdown" class="drop-down-position z-10 hidden bg-gray-50 divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                              <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="DeploymentDropdownButton">
+                                <li>
+                                  <a href="/technology-services/deployment/cloud/" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Cloud</a>
+                                </li>
+                                <li>
+                                  <a href="/technology-services/deployment/security/" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Security</a>
+                                </li>
+                                <li>
+                                  <a href="/technology-services/deployment/release-management/" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Release Management</a>
+                                </li>
+                              </ul>
+                          </div>
+                        </li>
+                        <li>
+                          <button id="ManageDropdownButton" data-dropdown-toggle="ManageDropdown" data-dropdown-placement="right-start" type="button" class="flex items-center justify-between w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"><a href="/technology-services/manage/">Manage</a><svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg></button>
+                          <div id="ManageDropdown" class="drop-down-position z-10 hidden bg-gray-50 divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                              <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="ManageDropdownButton">
+                                <li>
+                                  <a href="/technology-services/manage/infrastructure/" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Infrastructure</a>
+                                </li>
+                                <li>
+                                  <a href="/technology-services/manage/data/" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Data</a>
+                                </li>
+                                <li>
+                                  <a href="/technology-services/manage/access/" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Access</a>
+                                </li>
+                                <li>
+                                  <a href="/technology-services/manage/enterprise-i-t/" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Enterprise I.T.</a>
+                                </li>
+                                <li>
+                                  <a href="/technology-services/manage/content/" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Content</a>
+                                </li>
+                              </ul>
+                          </div>
+                        </li>
+                      </ul>
+                  </div>
+              </li>
+              <li>
+                <!-- <a href="/consulting-services" class="block py-2 pl-3 pr-4 md:p-0 text-white  hover:border-gray-300 hover:text-stone-200">Consulting Services</a> -->
+                <button id="ConsultingNavbarLink" data-dropdown-toggle="ConsultingNavbar" class="flex items-center justify-between w-full py-2 pl-3 pr-4 md:p-0 text-white  hover:border-gray-300 hover:text-stone-200"><a href="/consulting-services/">Consulting Services</a> <svg class="w-5 h-5 ml-1" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
+                <div id="ConsultingNavbar" class="z-10 hidden font-normal bg-gray-50 divide-gray-100 rounded-lg shadow w-54 dark:bg-gray-700 dark:divide-gray-600">
+                  <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="ConsultingLargeButton">
+                    <li>
+                      <a href="/consulting-services/go-to-market/" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Go To Market</a>
+                    </li>
+                    <li>
+                      <button id="BusinessDropdownButton" data-dropdown-toggle="BusinessDropdown" data-dropdown-placement="right-start" type="button" class="flex items-center justify-between w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"><a  href="/consulting-services/business-process-management/" >Business Process Management</a><svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg></button>
+                      <div id="BusinessDropdown" class="drop-down-position z-10 hidden bg-gray-50 divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                          <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="BusinessDropdownButton">
+                            <li>
+                              <a href="/consulting-services/operational-excellence-lean-six-sigma/" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Operational Excellence with Lean Six Sigma</a>
+                            </li>
+                          </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <button id="StrategyDropdownButton" data-dropdown-toggle="StrategyDropdown" data-dropdown-placement="right-start" type="button" class="flex items-center justify-between w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"><a href="/consulting-services/strategy/">Strategy</a><svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg></button>
+                      <div id="StrategyDropdown" class="drop-down-position z-10 hidden bg-gray-50 divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                          <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="StrategyDropdownButton">
+                            <li>
+                              <a href="/consulting-services/strategy/business/" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Business</a>
+                            </li>
+                            <li>
+                              <a href="/consulting-services/strategy/product/" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Product</a>
+                            </li>
+                            <li>
+                              <a href="/consulting-services/strategy/innovation/" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Innovation</a>
+                            </li>
+                            <li>
+                              <a href="/consulting-services/strategy/vendor/" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Vendor</a>
+                            </li>
+                            <li>
+                              <a href="/consulting-services/strategy/technology/" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Technology</a>
+                            </li>
+                          </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="/consulting-services/industry-and-technology-research/" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Industry and Technology Research </a>
+                    </li>
+                    <li>
+                      <a href="/consulting-services/regulatory-compliance-standards/" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Regulatory Compliance & Standards</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <!-- <a href="/solutions/attest/" class="block py-2 pl-3 pr-4 md:p-0 text-white  hover:border-gray-300 hover:text-stone-200">Solutions</a> -->
+                <button id="SolutionsNavbarLink" data-dropdown-toggle="SolutionsNavbar" class="flex items-center justify-between w-full py-2 pl-3 pr-4 md:p-0 text-white  hover:border-gray-300 hover:text-stone-200"><a href="/solutions/attest/">Solutions</a> <svg class="w-5 h-5 ml-1" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
+                <div id="SolutionsNavbar" class="z-10 hidden font-normal divide-gray-100 rounded-lg shadow w-54 dark:bg-gray-700 dark:divide-gray-600 bg-gray-50">
+                  <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="SolutionsavbarLink">
+                    <li>
+                      <a href="/solutions/attest/" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Attest</a>
+                    </li>
+                    <li>
+                      <a href="/solutions/cak/" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">CAK</a>
+                    </li>
+                    <li>
+                      <a href="/solutions/contexxio/" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Contexxio</a>
+                    </li>
+                    <li>
+                      <a href="/solutions/easyryde/" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">EasyRyde</a>
+                    </li>
+                    <li>
+                      <a href="/solutions/fluent/" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Fluent</a>
+                    </li>
+                    <li>
+                      <a href="/solutions/medigy/" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Medigy</a>
+                    </li>
+                    <li>
+                      <a href="/solutions/nup/" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Netspective Unified Process</a>
+                    </li>
+                    <li>
+                      <a href="/solutions/opsfolio/" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Opsfolio</a>
+                    </li>
+                    <li>
+                      <a href="/solutions/proveit/" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">ProveIT</a>
+                    </li>
+                    <li>
+                      <a href="/solutions/stature/" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Stature</a>
+                    </li>
+                    <li>
+                      <a href="/solutions/watchtower/" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Watchtower</a>
+                    </li>
+                  </ul>
+              </div>
+              </li>
+              <li>
+                <!-- <a href="/thought-leadership" class="block py-2 pl-3 pr-4 md:p-0 text-white  hover:border-gray-300 hover:text-stone-200">Thought Leadership</a> -->
+                <button id="ThoughtDropdownButton" data-dropdown-toggle="ThoughtDropdown"  type="button" class="flex items-center justify-between w-full py-2 pl-3 pr-4 md:p-0 text-white  hover:border-gray-300 hover:text-stone-200"><a href="/thought-leadership/">Thought Leadership</a><svg class="w-5 h-5 ml-1" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
+                <div id="ThoughtDropdown" class="z-10 hidden font-normal bg-gray-50 divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+                    <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="ThoughtDropdownButton">
+                      <li>
+                        <a href="/thought-leadership/knowldgebase/" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Knowledgebase</a>
+                      </li>
+                      <li>
+                        <a href="/thought-leadership/resources/" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Resources</a>
+                      </li>
+                    </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+  </header>

@@ -1,0 +1,40 @@
+---
+import NetspectiveLayout from "../../layouts/ds/tailwind/NetspectiveLayout.astro";
+import { Content } from "../../content/consulting-services/consulting-services.md";
+import { routes, Route } from "../../lib/native/route";
+import * as greatPost from "../../content/consulting-services/consulting-services.md";
+
+export interface Props {
+	readonly route: Route<any, any>;
+}
+
+
+const { route } = Astro.props;
+const r = routes(Astro, Astro.props.route);
+
+---
+
+<NetspectiveLayout route={route} {r}>
+  <main>
+    <section class="mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8">
+      <article class="pb-6 curated-content">
+        <div class="text-center">
+         <h3 class="text-2xl font-bold mb-10 mt-4 text-center inline-flex"><span class="bg-orange-600 text-white py-2 px-8">{greatPost.frontmatter.title}</span></h3>
+        </div>
+        <Content/>
+      <div class="clear"></div>
+      </article>  
+    </section>
+  </main>
+  <section class="px-8 sm:px-6 lg:px-8 bg-cover bg-no-repeat bg-center py-10 bg-image">
+    <article class="mx-auto max-w-6xl py-9 text-white text-center">
+      <h3 class="text-2xl font-semibold pb-5">Netspective is a leader in Technology and Consulting services in regulated markets - Healthcare, Government and Medical Technology.</h3>
+      <p>Technology, consulting, and solutions focused on firms impacted by FDA, ONC, NIST or other safety, privacy, and security regulations.</p>
+    </article>
+  </section>
+</NetspectiveLayout>
+
+  
+  
+  
+  

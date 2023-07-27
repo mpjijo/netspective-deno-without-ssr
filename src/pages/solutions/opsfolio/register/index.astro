@@ -1,0 +1,24 @@
+---
+import NetspectiveLayout from "../../../../layouts/ds/tailwind/NetspectiveLayout.astro";
+import { routes, Route } from "../../../../lib/native/route";
+import RegisterForm  from "../../../../components/native/www.netspective.com/RegisterForm";
+export interface Props {
+	readonly route: Route<any, any>;
+}
+
+
+const { route } = Astro.props;
+const r = routes(Astro, Astro.props.route);
+
+---
+
+<NetspectiveLayout route={route} {r}>
+  <main> 
+    <section class="mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8 bg-gray-100">
+      <article class="pb-6 curated-content">
+        <RegisterForm  client:only="react"/>
+      </article>
+    </section>
+  </main>
+  <div class="clear-both"></div>
+</NetspectiveLayout>

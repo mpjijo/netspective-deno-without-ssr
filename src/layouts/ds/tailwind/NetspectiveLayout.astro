@@ -1,0 +1,134 @@
+---
+import NetspectiveHeader  from "./NetspectiveHeader.astro";
+import NetspectiveFooter  from "./NetspectiveFooter.astro";
+//import { routes, Route } from "../../../lib/native/route";
+// export interface Props {
+// 	readonly route: Route<any, any>;
+// }
+const { route } = Astro.props;
+//const r = routes(Astro, Astro.props.route);
+---
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta content="" name="keywords">
+  <base href="/">
+  
+  <meta name="title" content="Netspective - Consulting and Solutions for Regulated IT and Engineering services - Government, Health and Medical Technology" />
+  <meta name="description" content="Software, technology, and management consulting focused on firms im pacted by FDA, ONC, NIST or other safety, privacy, and security regulations"/>
+  
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:type" content="article" />
+  
+  <meta property="og:title" content="Safety, privacy, and security focused technology consulting" />
+  <meta content="Software, technology, and management consulting focused on firms im pacted by FDA, ONC, NIST or other safety, privacy, and security regulations" property="og:description">
+  
+  <meta property="og:site_name" content="Netspective" />
+  <meta property="og:image" content="https://www.netspective.com/" />
+  <meta name="twitter:card" content="summary" />
+  <meta property="og:image:width" content="1024" />
+  <meta property="og:image:height" content="683" />
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  <meta name="twitter:title" content="Safety, privacy, and security focused technology consulting" />
+  <meta name = "twitter:description" content="Software, technology, and management consulting focused on firms im pacted by FDA, ONC, NIST or other safety, privacy, and security regulations" property="og:description">
+  <title>Netspective - Consulting and Solutions for Regulated IT and Engineering services - Government, Health and Medical Technology</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.css"  rel="stylesheet" />
+  <link rel="shortcut icon" type="image/x-icon" href="/knowledge-center/assets-natural/brand/www.netspective.com/logo.png">
+</head>
+<style is:global>
+  body {
+    font-size: 16px;
+    line-height: 25px;
+    color: #333;
+    position: relative; 
+}
+p {
+    margin-bottom:15px!important;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700!important;
+}
+.curated-content ul {
+	list-style-type: disc !important;
+	margin-left: 25px !important
+}
+
+.curated-content ul li {
+	margin-bottom: 10px !important;
+}
+
+.curated-content ol {
+	list-style-type: decimal !important;
+	margin-left: 25px !important
+}
+
+.curated-content ol li {
+	margin-bottom: 10px !important;
+}
+.curated-content ul li p, .curated-content ol li p {
+	margin-bottom: 10px !important;	
+}
+
+.curated-content a {
+    color: #428bca!important;
+    text-decoration: none!important;
+}
+.curated-content a:hover, .curated-content a:focus {
+    color: #2a6496!important;
+    text-decoration: none!important;
+}
+.bg-image{
+  background-image: url('/assets-natural/brand/www.netspective.com/call-to-action-bg.jpg');
+}
+img[src*='#right'] {
+    float: right;
+}
+.curated-content h3{  
+  font-size: 1.5rem;
+  line-height: 2rem;   
+  padding-top: 0.5rem; 
+  padding-bottom: 0.5rem;
+}
+.curated-content td, .curated-content th{
+    padding: 6px 7px;
+    text-align: left;
+}
+img[src*='#left'] {
+    float: left;
+    margin-right: 15px;
+    margin-top: 15px;
+}
+.clear{
+  clear: both!important;
+}
+main{
+  min-height: 472px;
+}
+.inner-content img{
+  display: inline-block !important; 
+}
+img[src*='#center'] {
+    display: block;
+    margin: auto;
+}
+.table-space td, .table-space th {
+    padding: 15px 12px!important;
+    text-align: inherit!important;
+}
+@media (max-width:600px){
+  .drop-down-position{
+  background: #ddd!important;
+  transform: translate(10px, 10px)!important; 
+}
+}
+</style>
+  <body>
+      <NetspectiveHeader route={route} />
+            <slot />
+     <NetspectiveFooter />  
+  </body>
+</html>

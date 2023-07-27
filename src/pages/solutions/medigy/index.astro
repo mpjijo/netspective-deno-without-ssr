@@ -1,0 +1,191 @@
+---
+import NetspectiveLayout from "../../../layouts/ds/tailwind/NetspectiveLayout.astro";
+import { routes, Route } from "../../../lib/native/route";
+
+export interface Props {
+	readonly route: Route<any, any>;
+}
+
+
+const { route } = Astro.props;
+const r = routes(Astro, Astro.props.route);
+const allPosts = await Astro.glob("../../../content/solutions/medigy/**/*.{md,mdx}");
+allPosts.sort((a, b) => {
+  const aHdoIlo = a.frontmatter.weight ?? 0;
+  const bHdoIlo = b.frontmatter.weight ?? 0;
+   return aHdoIlo < bHdoIlo ? -1 : (aHdoIlo > bHdoIlo ? 1 : 0);
+});
+---
+
+<NetspectiveLayout route={route} {r}>
+  <main>    
+    <!-- inner page > starts -->
+    <section class="px-8 sm:px-6 lg:px-8 bg-cover bg-no-repeat bg-center py-10" style="background-image: url(/assets-natural/brand/www.netspective.com/solutions/header-bg.jpg);">
+      <article class="mx-auto max-w-4xl py-9 text-white text-center">
+        <h3 class="text-2xl md:text-4xl font-semibold pb-5 uppercase">DATA-DRIVEN CARE DELIVERY PLATFORM</h3>
+        <p class="text-2xl pb-5 font-semibold text-gray-100">Add custom analytics, patient engagement, population health, and care coordination to your MU Certified EHR.</p>
+        <p class="text-xl pb-5 font-semibold text-gray-100">Medigy improves care delivery and decision making by identifying care gaps using well established condition-, treatment-, and demography-specific protocols.</p>
+      
+        <div class="grid grid-cols-1 md:grid-cols-6 gap-4">
+          <div class="my-2">
+          <a href="/solutions/medigy/#research" class="text-white">
+            <p class="mb-1 flex justify-center"><img src={r.uaAssetURL.brand(
+              "/www.netspective.com/solutions/medigy/Audit-Assess.png"
+            )} alt="Consolidate & Aggregate EHR Data"></p>
+            <p class="leading-5">Consolidate & Aggregate EHR Data</p>
+          </a>
+          </div>
+          <div class="my-2">
+            <a href="/solutions/medigy/#assemble" class="text-white">
+              <p class="mb-1 flex justify-center"><img src={r.uaAssetURL.brand(
+                "/www.netspective.com/solutions/medigy/Manage-Populations.png"
+              )} alt="Manage Populations across Boundaries"></p>
+              <p class="leading-5">Manage Populations</p>
+            </a>  
+          </div>
+          <div class="my-2">
+            <a href="/solutions/medigy/#curate" class="text-white">
+              <p class="mb-1 flex justify-center"><img src={r.uaAssetURL.brand(
+                "/www.netspective.com/solutions/medigy/Coordinate-Care-across-Health-Systems.png"
+              )} alt="Coordinate Care across Health Systems"></p>
+              <p class="leading-5">Coordinate Care across Health Systems</p>
+            </a>  
+          </div>
+          <div class="my-2">
+            <a href="/solutions/medigy/#Credentialing" class="text-white">
+              <p class="mb-1 flex justify-center"><img src={r.uaAssetURL.brand(
+                "/www.netspective.com/solutions/medigy/Track-Metrics-Quality-Scores.png"
+              )} alt="Track Metrics & Quality Scores"></p>
+              <p class="leading-5">Track Metrics & Quality Scores</p>
+            </a>  
+          </div>
+          <div class="my-2">
+            <a href="/solutions/medigy/#distribute" class="text-white">
+              <p class="mb-1 flex justify-center"><img src={r.uaAssetURL.brand(
+                "/www.netspective.com/solutions/medigy/Integrate-Genetic-Information.png"
+              )} alt="Integrate Genetic Information"></p>
+              <p class="leading-5">Integrate Genetic Information</p>
+            </a>  
+          </div>
+          <div class="my-2">
+            <a href="/solutions/medigy/#distribute" class="text-white">
+              <p class="mb-1 flex justify-center"><img src={r.uaAssetURL.brand(
+                "/www.netspective.com/solutions/medigy/Medical-Devices-and-Wearables-Data-Integration.png"
+              )} alt="Integrate Devices & Wearables"></p>
+              <p class="leading-5">Integrate Devices & Wearables</p>
+            </a>  
+          </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-6 gap-4">
+          <div></div>
+          <div class="my-2">
+            <a href="/solutions/medigy/#research" class="text-white">
+              <p class="mb-1 flex justify-center"><img src={r.uaAssetURL.brand(
+                "/www.netspective.com/solutions/medigy/Patient-Activation.png"
+              )} alt="Activate & Engage Patients/Providers"></p>
+              <p class="leading-5">Activate & Engage Patients/Providers</p>
+            </a>
+          </div>
+          <div class="my-2">
+            <a href="/solutions/medigy/#research" class="text-white">
+              <p class="mb-1 flex justify-center"><img src={r.uaAssetURL.brand(
+                "/www.netspective.com/solutions/medigy/Data-Driven-Decision-Making.png"
+              )} alt="Data Driven Decision Making"></p>
+              <p class="leading-5">Data Driven Decision Making</p>
+            </a>
+          </div>
+          <div class="my-2">
+            <a href="/solutions/medigy/#research" class="text-white">
+              <p class="mb-1 flex justify-center"><img src={r.uaAssetURL.brand(
+                "/www.netspective.com/solutions/medigy/pghd.png"
+              )} alt="PGHD"></p>
+              <p class="leading-5">PGHD</p>
+            </a>
+          </div>
+          <div class="my-2">
+            <a href="/solutions/medigy/#research" class="text-white">
+              <p class="mb-1 flex justify-center"><img src={r.uaAssetURL.brand(
+                "/www.netspective.com/solutions/medigy/idss-icon.png"
+              )} alt="IDSS"></p>
+              <p class="leading-5">IDSS</p>
+            </a>
+          </div>
+           
+        </div>
+      </article>
+    </section>
+    
+    <!-- inner nav > starts -->
+    <section>
+      <nav class="drop-shadow-xl text-white bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-red-600 via-red-900 to-red-900">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="flex h-16 justify-between">
+            <div class="flex">
+              <div class="-ml-2 mr-2 flex items-center md:hidden">
+                <!-- Mobile menu button -->
+                <button type="button" data-collapse-toggle="medigy-mobile-menu" class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-controls="medigy-mobile-menu" aria-expanded="false">
+                  <span class="sr-only">Open main menu</span>
+                  <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                  </svg>
+                  <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+              <div class="flex flex-shrink-0 items-center uppercase text-xl">
+                <a href="/solutions/medigy/" class="text-white">Medigy</a>
+              </div>
+              <div class="hidden md:ml-6 md:flex md:space-x-8 text-base font-normal">
+                <a href="/solutions/medigy/#why-medigy" class="inline-flex items-center px-1 pt-1 text-gray-300">Why Medigy?</a>
+                <a href="/solutions/medigy/#what-is-medigy" class="inline-flex items-center px-1 pt-1 text-white hover:text-gray-300">What is it?</a>
+                <a href="/solutions/medigy/#aggregate" class="inline-flex items-center px-1 pt-1 text-white hover:text-gray-300">Features</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Mobile menu, show/hide based on menu state. -->
+        <div class="md:hidden hidden" id="medigy-mobile-menu">
+          <div class="space-y-1 pb-3 pt-2">
+            <a href="/solutions/medigy/#what-is-medigy" class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-white hover:border-red-400 hover:bg-gray-50 hover:text-gray-800">Why Medigy?</a>
+            <a href="/solutions/medigy/#what-is-it" class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-white hover:border-red-400 hover:bg-gray-50 hover:text-gray-800">What is it?</a>
+            <a href="/solutions/medigy/#aggregate" class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-white hover:border-red-400 hover:bg-gray-50 hover:text-gray-800">Features</a>
+          </div>
+        </div>
+      </nav>
+    </section>
+    <!-- inner nav < ends -->
+    
+    <section class="mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8 mb-8"> 
+      {
+        allPosts.length > 0
+          ? allPosts.map(
+              (post) => ( 
+      <div id={post.frontmatter.slugid} class="border border-x-0 border-t-0 border-gray-100">
+        <article class="pt-10 pb-9">
+          <div class="text-center">
+            <h3 class="text-2xl font-bold mb-10 text-center inline-flex"><span class="bg-orange-600 text-white py-2 px-8">{post.frontmatter.title}
+          </span></h3>
+          </div>          
+          <div set:html={post.compiledContent()} class="pb-6 curated-content">
+          </div>
+        </article>
+      </div>
+      ),
+            )
+          : "No data"
+      }
+    
+    </section>
+    
+    <section class="px-8 sm:px-6 lg:px-8 bg-cover bg-no-repeat bg-center py-10 bg-image">
+        <article class="mx-auto max-w-6xl py-9 text-white text-center">
+          <h3 class="text-2xl font-semibold pb-5">Netspective is a leader in Technology and Consulting services in regulated markets - Healthcare, Government and Medical Technology.</h3>
+          <p>Technology, consulting, and solutions focused on firms impacted by FDA, ONC, NIST or other safety, privacy, and security regulations.</p>
+        </article>
+    </section>
+    <!-- inner page < ends -->
+  </main>
+  <div class="clear-both"></div>
+</NetspectiveLayout>

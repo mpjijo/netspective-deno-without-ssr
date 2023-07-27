@@ -1,0 +1,39 @@
+---
+// component imports
+import Link from "./link.astro"
+
+const { prevUrl, nextUrl } = Astro.props;
+---
+
+<nav aria-label="Blog pages" class="flex items-center mt-8 justify-between border-t border-gray-200 px-4 sm:px-0">
+	{
+		prevUrl && (
+			<Link
+				text="Previous"
+				href={prevUrl}
+				style="primary"
+				borderVisible={true}
+				isFilled={false}
+				icon={{
+					name: "table:arrow-big-left-line",
+					side: "left",
+				}}
+			/>
+		)
+	}
+	{
+		nextUrl && (
+			<Link
+				text="Next"
+				href={nextUrl}
+				style="primary"
+				borderVisible={true}
+				isFilled={false}
+				icon={{
+					name: "table:arrow-big-right-line",
+					side: "right",
+				}}
+			/>
+		)
+	}
+</nav>
