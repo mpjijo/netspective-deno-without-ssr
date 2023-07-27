@@ -26,14 +26,6 @@ export const wsEditorResolver = wsEditorEnvConfig
     })
   : () => undefined;
 
-export const gnioGitLabResolvers = ws.gitLabResolvers(
-  "https://git.netspective.io/precision-knowledge-content/knowledge-center",
-  "git.netspective.io",
-);
-export const gpmGitLabResolvers = ws.gitLabResolvers(
-  "https://gl.infra.medigy.com/medigy-digital-properties/gpm.medigy.com",
-  "gl.infra.medigy.com",
-);
 
 export type OriginContentEntry = { readonly slug: string; readonly id: string };
 
@@ -175,25 +167,7 @@ export const uaHomeURL = () => {
   return `${routesBaseUrl}/`;
 };
 
-export const uaNavigationURL = {
-  observability: (relativePath: string) =>
-    `${routesBaseUrl}/observability${relativePath}`,
-  pkc: (relativePath: string) => `${routesBaseUrl}/pkc${relativePath}`,
-  blogPrime: (relativePath: string) =>
-    `${routesBaseUrl}/blog/prime${relativePath}`,
-  qualitySystem: (relativePath: string) =>
-    `${routesBaseUrl}/quality-system${relativePath}`,
-};
 
-export const uaModelURL = {
-  observability: (relativePath: string) =>
-    `${routesBaseUrl}/observability${relativePath}`,
-  pkc: (relativePath: string) => `${routesBaseUrl}/pkc/model${relativePath}`,
-};
-
-export const uaObservabilityContent = (relativePath: string) => {
-  return `${routesBaseUrl}/observability${relativePath}`;
-};
 
 export const uaAssetURL = {
   brand: (relativePath: string) =>
@@ -218,12 +192,7 @@ export function routes<
     uaFlexibleURL,
     uaHomeURL,
     uaAssetURL,
-    uaNavigationURL,
-    uaModelURL,
-    uaObservabilityContent,
     wsEditorResolver,
-    gnioGitLabResolvers,
-    gpmGitLabResolvers,
   };
 }
 
@@ -239,9 +208,6 @@ export function endpointRoutes<
     uaFlexibleURL,
     uaHomeURL,
     uaAssetURL,
-    uaNavigationURL,
-    uaModelURL,
-    uaObservabilityContent,
   };
 }
 

@@ -2,7 +2,7 @@
 // this is a Deno script written in "NPM-compatible" manner;
 // run it using `npm run sync-cc-routes` as part of the Astro build process
 import * as rGovn from "../governance/information-model/route.ts";
-import { walkFsEntries } from "../lib/universal/fs-walk.ts";
+import { walkFsEntries } from "../../lib/universal/fs-walk.ts";
 import { cwd } from "node:process";
 
 type ContentCollection = string;

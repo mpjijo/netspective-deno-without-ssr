@@ -37,11 +37,11 @@ const Posts = await Astro.glob("../../../content/about-us/newsroom/*.md");
             ? Posts.map(
                 (post) => (
                   <div class="news-content">
-                  <a href={Astro.url + post.frontmatter.slugid}><p class="font-semibold">{post.frontmatter.title}</p></a>
+                  <a href={Astro.url + post.frontmatter.slugid +"/"}><p class="font-semibold">{post.frontmatter.title}</p></a>
                     <p>{getFormattedDate(post.frontmatter.date)}</p>
                     <p class="demo-1">
                       {post.frontmatter.description}
-                      <a href={Astro.url + post.frontmatter.slugid}><span class="text-red-700">Read more...</span></a>
+                      <a href={Astro.url + post.frontmatter.slugid +"/"}><span class="text-red-700">Read more...</span></a>
                     </p>
                     
                 </div>

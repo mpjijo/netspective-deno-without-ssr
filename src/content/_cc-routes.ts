@@ -11,35 +11,8 @@ import type {
 // src/content/_cc-routes-sync.deno.ts and if content is out of sync you will
 // need to `npm run npm run sync-cc-routes`
 
-import blogPrime from "./blog-prime/_routes.auto.json";
-export type BlogPrimeIRUsKey = keyof typeof blogPrime;
-
-import devSecOpsInfra from "./dev-sec-ops-infrastructure/_routes.auto.json";
-export type DevSecOpsInfraIRUsKey = keyof typeof devSecOpsInfra;
-
-import enterArch from "./enterprise-architecture/_routes.auto.json";
-export type EnterArchIRUsKey = keyof typeof enterArch;
-
-import enterArchExplore from "./enterprise-architecture-explore/_routes.auto.json";
-export type EnterArchExploreIRUsKey = keyof typeof enterArchExplore;
-
-import qualitySystem from "./quality-system/_routes.auto.json";
-export type QualitySystemIRUsKey = keyof typeof blogPrime;
-
-import proseFlexible from "./prose-flexible/_routes.auto.json";
-export type ProseFlexIRUsKey = keyof typeof proseFlexible;
-
-import initiatives from "./initiatives/_routes.auto.json";
-export type InitiativesIRUsKey = keyof typeof initiatives;
 
 export const druCatalogSources = {
-  "blog-prime": blogPrime,
-  "dev-sec-ops-infrastructure": devSecOpsInfra,
-  "enterprise-architecture": enterArch,
-  "enterprise-architecture-explore": enterArchExplore,
-  "quality-system": qualitySystem,
-  "prose-flexible": proseFlexible,
-  initiatives: initiatives,
 };
 export type DiruSource = keyof typeof druCatalogSources;
 
